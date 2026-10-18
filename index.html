@@ -1,0 +1,1105 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数据分析 DAY01–DAY04 · 学习总结</title><style>
+.keypoints{padding-left:24px}.keypoints li{padding:6px 0}.note{font-size:13px;color:var(--muted)}
+
+:root{--bg:#f4f5f7;--ink:#202c3d;--muted:#69758a;--brand:#4668dd;--line:#e5e9f0}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.85 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}aside{position:fixed;inset:0 auto 0 0;width:276px;background:#182538;color:#c0cbe0;padding:32px 20px;overflow:auto}.logo{font-size:12px;letter-spacing:3px;color:#8caae9}.brand{font-size:24px;color:#fff;font-weight:700;margin:8px 0 4px}.caption{font-size:13px;color:#98a9c3;margin-bottom:28px}nav button{font:inherit;display:block;width:100%;text-align:left;border:0;background:none;color:#b9c6da;padding:12px 14px;margin:4px 0;border-radius:9px;cursor:pointer;font-size:14px}nav button:hover{background:#243750;color:white}nav button.active{background:#354e85;color:white}nav button span{font-size:11px;opacity:.6;margin-right:12px}.sidefoot{font-size:12px;color:#9baec9;margin:28px 12px}.layout{margin-left:276px;padding:30px 46px}.toolbar{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px;color:var(--muted)}button.action{background:#fff;color:var(--ink);border:1px solid #d9dfea;border-radius:8px;padding:9px 16px;cursor:pointer;font:inherit;font-size:13px}button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #e49c35;outline-offset:3px}article{display:none;max-width:1040px;margin:22px auto;background:white;border:1px solid var(--line);border-radius:16px;padding:48px 58px;box-shadow:0 8px 30px #22336605}article.active{display:block}.eyebrow{color:var(--brand);font-size:12px;letter-spacing:2px;font-weight:700}h1{font-size:34px;line-height:1.4;letter-spacing:-1px;margin:10px 0}header>p{color:var(--muted);margin:12px 0 32px}h2{font-size:22px;margin:36px 0 14px}h3{font-size:17px;margin-top:26px}p,li{font-size:15px}li{margin:7px 0}table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;overflow-wrap:anywhere}th{text-align:left;background:#f0f3fa;color:#465777}td,th{padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}code{font-family:ui-monospace,Consolas,monospace;background:#eef2f9;border-radius:4px;padding:2px 5px;font-size:13px}pre{background:#182538;color:#d9e7ff;padding:22px;border-radius:10px;overflow:auto;line-height:1.8;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}pre code{background:none;color:inherit;padding:0}.callout{background:#f0f4ff;border-left:3px solid #6f8ae2;padding:17px 20px;font-size:14px;color:#465b80;border-radius:0 9px 9px 0}.road{display:grid;grid-template-columns:1fr 1fr;gap:14px}.road>div{border:1px solid var(--line);border-radius:12px;padding:20px}.road b{color:var(--brand);font-size:12px}.road strong{display:block;font-size:18px;margin:8px 0}.road span{font-size:13px;color:var(--muted)}.flow{background:#f0f3fa;border-radius:9px;padding:16px;font-family:monospace}.checks{padding-left:22px}details{margin:14px 0;border:1px solid var(--line);border-radius:10px;padding:15px 20px}summary{cursor:pointer;font-weight:600;font-size:15px}details p{padding:6px 4px}.source{background:#f3f5f9;color:var(--ink);max-height:650px;overflow:auto}.pager{max-width:1040px;display:flex;justify-content:space-between;align-items:center;margin:20px auto 45px}.pager button:disabled{opacity:.35;cursor:default}#progress{height:3px;position:fixed;top:0;left:276px;background:var(--brand);z-index:2;transition:width .2s}#mobilemenu{display:none}@media(max-width:850px){aside{position:static;width:100%;padding:20px}.caption,.sidefoot{display:none}nav{display:flex;flex-wrap:wrap;margin-top:15px}nav button{width:auto;font-size:12px;padding:8px}nav button span{display:none}.brand{font-size:20px}.layout{margin:0;padding:20px 12px}article{padding:28px 20px;margin-top:16px}h1{font-size:27px}.road{grid-template-columns:1fr}td,th{padding:10px 7px;font-size:12px}#progress{left:0}.toolbar{flex-wrap:wrap}}@media print{aside,.toolbar,.pager,#progress{display:none}.layout{margin:0;padding:0}article,article.active{display:block;box-shadow:none;border:0;padding:18px 0;margin:0;break-before:page}article:first-of-type{break-before:auto}pre{background:#f1f1f1;color:#111}details{break-inside:avoid}details>*{display:block}details::details-content{content-visibility:visible}h2,h3{break-after:avoid}tr{break-inside:avoid}body{background:white}h1{font-size:28px}}
+</style></head><body><div id="progress"></div><aside><div class="logo">LEARNING JOURNAL</div><div class="brand">数据分析学习手册</div><div class="caption">DAY 01 — DAY 04 / 复习总结</div><nav aria-label="章节目录"><button type="button" data-page="0" onclick="show(0)"><span>01</span>学习总览</button><button type="button" data-page="1" onclick="show(1)"><span>02</span>DAY 01 · Excel 分析</button><button type="button" data-page="2" onclick="show(2)"><span>03</span>DAY 02 · MySQL 基础</button><button type="button" data-page="3" onclick="show(3)"><span>04</span>DAY 03 · 数据维护</button><button type="button" data-page="4" onclick="show(4)"><span>05</span>DAY 04 · SQL 查询</button><button type="button" data-page="5" onclick="show(5)"><span>06</span>重点纠错</button><button type="button" data-page="6" onclick="show(6)"><span>07</span>练习与复习</button><button type="button" data-page="7" onclick="show(7)"><span>08</span>原笔记索引</button></nav><div class="sidefoot">点击目录切换章节<br>← → 快捷翻页<br>无需联网，可离线阅读</div></aside><main class="layout"><div class="toolbar"><span id="crumb"></span><button class="action" onclick="printAll()">打印 / 保存为 PDF</button></div><article id="page-0" aria-labelledby="title-0"><header><div class="eyebrow">STUDY NOTES / 01</div><h1 id="title-0" tabindex="-1">四天内容，一页看懂</h1><p>Excel 做汇总，SQL 管数据、查结果。</p></header>
+<div class="road"><div><b>DAY 01 · EXCEL</b><strong>汇总与展示</strong><span>透视表 → 占比 → 图表</span></div><div><b>DAY 02 · MYSQL</b><strong>建库与建表</strong><span>字段类型 → 数据约束</span></div><div><b>DAY 03 · 数据维护</b><strong>改结构、改记录</strong><span>ALTER / INSERT / UPDATE / DELETE</span></div><div><b>DAY 04 · SQL 查询</b><strong>筛选与统计</strong><span>WHERE → GROUP BY → ORDER BY → LIMIT</span></div></div>
+<h2>先记住这 4 句话</h2><ol class="keypoints"><li><b>做分析，先定口径：</b>统计什么、按什么分、和谁比较。</li><li><b>做透视表，先选维度和指标：</b>地区是维度，金额是指标。</li><li><b>改数据，先查范围：</b>UPDATE / DELETE 漏掉 WHERE，会影响全表。</li><li><b>写查询，先读懂题目：</b>“自营”“每个分类”“前 5 条”都要落实到 SQL。</li></ol>
+<h2>Excel 与 SQL 的对应关系</h2><table><tr><th>想做什么</th><th>Excel</th><th>SQL</th></tr><tr><td>筛选记录</td><td>筛选器</td><td>WHERE</td></tr><tr><td>按地区求和</td><td>地区放行，金额放值</td><td>GROUP BY + SUM</td></tr><tr><td>金额从高到低</td><td>降序</td><td>ORDER BY … DESC</td></tr></table><p class="note">依据你上传的 DAY01–DAY04 笔记整理；纠错单列，原文见末页。补充建议已标注。</p></article><article id="page-1" aria-labelledby="title-1"><header><div class="eyebrow">STUDY NOTES / 02</div><h1 id="title-1" tabindex="-1">Excel：分组汇总，看清占比</h1><p>重点：维度、指标、汇总方式、分母。</p></header>
+<div class="callout"><b>透视表四问：</b>按什么分？统计什么？怎么汇总？占谁的比例？</div>
+<h2>1. 同比与环比</h2><table><tr><th>指标</th><th>和谁比较</th><th>增长率</th></tr><tr><td>同比</td><td>去年同期</td><td>（本期 − 去年同期）÷ 去年同期</td></tr><tr><td>环比</td><td>紧邻的上期</td><td>（本期 − 上期）÷ 上期</td></tr></table><p><b>记住：</b>销量上涨不等于某个人带来的效果；基期为 0 时不能直接套公式。</p>
+<h2>2. 透视表，按这 4 步做</h2><ol><li><b>整理数据：</b>保留标题，用 Ctrl + T 转为超级表。</li><li><b>放字段：</b>地区、渠道放行或列；金额、数量放值。</li><li><b>选汇总：</b>金额求和、记录计数、最高消费取最大值。</li><li><b>查口径：</b>占比看分母，新增数据后检查范围并刷新。</li></ol>
+<h2>3. 占比看分母</h2><p>假设：<b>地区在行，性别在列</b>。</p><table><tr><th>想看什么</th><th>值显示方式</th></tr><tr><td>各地区占全部金额多少</td><td>总计百分比</td></tr><tr><td>每个地区内部的男女占比</td><td><b>行汇总百分比</b></td></tr><tr><td>某一性别的金额分布在哪些地区</td><td>列汇总百分比</td></tr></table>
+<h2>4. 图表怎么选</h2><p><b>比大小：</b>条形 / 柱形　<b>看时间趋势：</b>折线　<b>看少量类别占比：</b>饼图。</p><p>大屏流程：透视表 → 图表 → 排版 → 切片器连接报表。</p>
+<details><summary>展开：电商练习的 5 类做法</summary><ul><li><b>求和 / 最大值：</b>地区金额、渠道订单量、渠道最大消费。</li><li><b>交叉分析：</b>地区 × 渠道；地区 × 性别。</li><li><b>基准比较：</b>与东北相比的百分比或差额。</li><li><b>排序与分组：</b>自定义地区顺序；日期按年、季度；年龄按区间。</li><li><b>增长与累计：</b>逐年增长选“上一项”；累计先明确排序。</li></ul></details>
+<div class="callout"><b>易错：</b>用户 ID 计数不一定是去重用户数；新增行列能否纳入，取决于数据源范围。</div></article><article id="page-2" aria-labelledby="title-2"><header><div class="eyebrow">STUDY NOTES / 03</div><h1 id="title-2" tabindex="-1">MySQL：先设计表，再存数据</h1><p>重点：类型选对，约束写清。</p></header>
+<div class="callout"><b>数据库 → 表 → 字段与记录。</b>字段是列，记录是行。</div>
+<h2>1. SQL 的四类用途</h2><table><tr><th>类别</th><th>做什么</th><th>关键词</th></tr><tr><td>DDL</td><td>改结构</td><td>CREATE / ALTER / DROP</td></tr><tr><td>DML</td><td>增删改记录</td><td>INSERT / UPDATE / DELETE</td></tr><tr><td>DQL</td><td>查数据</td><td>SELECT</td></tr><tr><td>DCL</td><td>管权限</td><td>GRANT / REVOKE（补充）</td></tr></table>
+<h2>2. 常用类型</h2><table><tr><th>数据</th><th>类型</th><th>原因</th></tr><tr><td>编号、数量</td><td>INT / BIGINT</td><td>存整数，按范围选</td></tr><tr><td>姓名、手机号</td><td>VARCHAR(n)</td><td>存文本，保留前导零</td></tr><tr><td>固定长度编码</td><td>CHAR(n)</td><td>定长文本</td></tr><tr><td>金额</td><td>DECIMAL(10,2)</td><td>共 10 位，其中 2 位小数</td></tr><tr><td>日期 / 日期时间</td><td>DATE / DATETIME</td><td>按是否需要时分秒选择</td></tr></table><p><b>记住：</b>金额通常用 DECIMAL；DOUBLE 是近似浮点数。</p>
+<h2>3. 用一张表记住约束</h2><pre><code>CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(20) NOT NULL,
+  phone VARCHAR(20) UNIQUE,
+  gender VARCHAR(2) DEFAULT '男'
+);</code></pre><p><b>主键：</b>唯一且非空　<b>自增：</b>自动生成编号<br><b>非空：</b>不能是 NULL　<b>唯一：</b>限制重复值　<b>默认：</b>省略时使用预设值。</p><p class="note">NOT NULL 不等于禁止空字符串；MySQL 的 UNIQUE 通常允许多个 NULL；自增不保证连续。</p>
+<details><summary>展开：连接与常用命令</summary><pre><code>mysql -h 127.0.0.1 -P 3306 -u 用户名 -p
+-- 按提示输入密码
+
+CREATE DATABASE IF NOT EXISTS study_lab
+  CHARACTER SET utf8mb4;
+USE study_lab;
+SHOW TABLES;
+DESC users;
+SHOW CREATE TABLE users;</code></pre><p>MySQL 默认端口通常为 3306。补充建议：新练习库使用 utf8mb4。</p></details></article><article id="page-3" aria-labelledby="title-3"><header><div class="eyebrow">STUDY NOTES / 04</div><h1 id="title-3" tabindex="-1">数据维护：先分清改什么</h1><p>重点：ALTER 改结构，DML 改记录。</p></header>
+<h2>1. 改表结构：ALTER</h2><pre><code>-- 新增字段
+ALTER TABLE users ADD age INT;
+-- 重命名字段，并重新写明类型和属性
+ALTER TABLE users CHANGE name user_name
+  VARCHAR(20) NOT NULL;
+-- 删除字段
+ALTER TABLE users DROP COLUMN age;</code></pre>
+<h2>2. 改记录：增、改、删</h2><pre><code>-- 增：明确列名，值一一对应
+INSERT INTO users (user_name, phone)
+VALUES ('张三', '13800138001'),
+       ('李四', '13800138002');</code></pre><pre><code>-- 改：只给开发部涨薪
+UPDATE emp_study
+SET emp_salary = emp_salary + 1000
+WHERE emp_dept = '开发部';
+
+-- 删：工资等于 15000 的员工
+DELETE FROM emp_study
+WHERE emp_salary = 15000;</code></pre><div class="callout"><b>执行前先查：</b>把相同 WHERE 放进 SELECT，核对范围。以上变更示例仅用于独立练习库；调薪重复执行会重复增加。</div>
+<h2>3. 三种“删除”别混淆</h2><table><tr><th>命令</th><th>删除什么</th><th>保留结构</th></tr><tr><td>DELETE … WHERE …</td><td>满足条件的记录</td><td>是</td></tr><tr><td>TRUNCATE TABLE</td><td>全部记录，通常重置自增</td><td>是</td></tr><tr><td>DROP TABLE</td><td>整张表</td><td>否</td></tr></table><p><b>记住：</b>UPDATE / DELETE 不写 WHERE，会影响全表；MySQL 的 TRUNCATE 会隐式提交，不能当作可回滚的普通删除。</p></article><article id="page-4" aria-labelledby="title-4"><header><div class="eyebrow">STUDY NOTES / 05</div><h1 id="title-4" tabindex="-1">SELECT：把题目拆成查询步骤</h1><p>重点：先筛行，再分组，最后排序、取条数。</p></header>
+<div class="callout"><b>读题找关键词：</b>“自营”→ WHERE；“每类”→ GROUP BY；“平均”→ AVG；“前 5”→ ORDER BY + LIMIT。</div>
+<h2>1. 一条 SQL 串起查询</h2><pre><code>SELECT category_id, AVG(score) AS avg_score
+FROM products
+WHERE is_self = '自营'       -- 先筛选商品
+GROUP BY category_id        -- 再按分类统计
+HAVING AVG(score) > 9.5      -- 筛选统计结果
+ORDER BY avg_score DESC     -- 从高到低
+LIMIT 5;                    -- 最多取 5 组</code></pre>
+<h2>2. 条件怎么写</h2><table><tr><th>需求</th><th>写法</th></tr><tr><td>同时满足 / 任一满足</td><td>AND / OR；混用时加括号</td></tr><tr><td>999 到 4199，含两端</td><td>price BETWEEN 999 AND 4199</td></tr><tr><td>几个指定值之一</td><td>price IN (999, 2199, 4199)</td></tr><tr><td>以“华为”开头 / 包含“小”</td><td>name LIKE '华为%' / name LIKE '%小%'</td></tr><tr><td>匹配一个字符</td><td>LIKE 中用 _；% 匹配零个或多个字符</td></tr><tr><td>没有评分 / 已有评分</td><td>score IS NULL / IS NOT NULL</td></tr></table>
+<h2>3. 统计记住 5 个函数</h2><p><code>COUNT</code> 计数　<code>SUM</code> 求和　<code>AVG</code> 平均　<code>MAX</code> 最大　<code>MIN</code> 最小。</p><ul><li><b>COUNT(*)：</b>统计行数；<b>COUNT(score)：</b>只统计非空评分。</li><li><b>WHERE：</b>过滤原始行；<b>HAVING：</b>过滤分组结果。</li><li>初学时，SELECT 中非聚合列都写进 GROUP BY。</li></ul>
+<h2>4. LIMIT：先跳过，再取出</h2><pre><code>-- 按价格降序，跳过 10 行，取 5 行
+SELECT id, name, price
+FROM products
+ORDER BY price DESC, id ASC
+LIMIT 10, 5;</code></pre><p><b>分页：</b>偏移量 =（页码 − 1）× 每页条数。<code>LIMIT 5</code> 表示取前 5 行。</p>
+<details><summary>展开：自营商品中评分最高的一条</summary><pre><code>SELECT id, name, score
+FROM products
+WHERE is_self = '自营' AND score IS NOT NULL
+ORDER BY score DESC, id ASC
+LIMIT 1;</code></pre><p>并列最高时这里只取一条；“第二条记录”也不一定是“第二高的不同价格”。</p></details></article><article id="page-5" aria-labelledby="title-5"><header><div class="eyebrow">STUDY NOTES / 06</div><h1 id="title-5" tabindex="-1">重点纠错：先核对这 6 项</h1><p>容易写错的不是长语句，而是条件和口径。</p></header>
+<table><tr><th>常见错误</th><th>正确记法</th></tr><tr><td>开发部涨薪漏掉条件</td><td><b>WHERE emp_dept = '开发部'</b></td></tr><tr><td>“工资等于 15000”写成 &gt;</td><td><b>emp_salary = 15000</b></td></tr><tr><td>“各分类内区分自营”只按自营分组</td><td><b>GROUP BY category_id, is_self</b></td></tr><tr><td>LIMIT 两个参数记反</td><td><b>LIMIT 偏移量, 条数</b></td></tr><tr><td>地区内部男女占比用列百分比</td><td>地区在行时，用<b>行汇总百分比</b></td></tr><tr><td>逐年增长固定对比 2017 年</td><td>逐年比较用<b>上一项</b>；固定 2017 年是基期比较</td></tr></table>
+<details><summary>展开：其他笔记修正</summary><ul><li><code>IF NOT EXISTS</code>：不存在才创建；已存在才避免重复创建。</li><li>删表写 <code>DROP TABLE IF EXISTS 表名;</code>，不是 IS EXISTS。</li><li>看结构写 <code>DESC 表名;</code>，不是 SHOW TABLES。</li><li>批量插入顺序：<code>INSERT INTO 表名 (列名) VALUES (...), (...);</code>。</li><li>订单建表练习缺少价格字段，应补齐。</li><li>“自营最高评分”必须先加自营筛选。</li><li>确认 orders 与 `order` 是否已重命名；库表名大小写统一。</li><li>夏装选择题的答案存在冲突：数字只说明夏装销售额的同期和上期差异，不能判断经理能力或全部服装表现。</li></ul></details>
+<div class="callout"><b>检查顺序：</b>条件是否漏写 → 分组维度是否齐全 → 分母 / 基期是否正确 → 排序与条数是否符合题意。</div></article><article id="page-6" aria-labelledby="title-6"><header><div class="eyebrow">STUDY NOTES / 07</div><h1 id="title-6" tabindex="-1">5 道题，检查是否真正掌握</h1><p>先自己回答，再展开答案。</p></header>
+<details><summary>01 · 环比上涨，能直接说明新店长做得好吗？</summary><p>不能。环比只说明比上期上涨，不能直接证明因果。</p></details>
+<details><summary>02 · 地区在行、性别在列，如何看每个地区内部男女金额占比？</summary><p>金额求和，值显示方式选择<b>行汇总百分比</b>。</p></details>
+<details><summary>03 · 为什么手机号用 VARCHAR，金额用 DECIMAL？</summary><p>手机号是标识，需要保留前导零；金额需要精确的小数表示，并选择足够的位数。</p></details>
+<details><summary>04 · 查自营、价格在 999～4199 之间的商品，价格从高到低。</summary><pre><code>SELECT id, name, price
+FROM products
+WHERE is_self = '自营'
+  AND price BETWEEN 999 AND 4199
+ORDER BY price DESC, id ASC;</code></pre></details>
+<details><summary>05 · 每页 5 条，查第 3 页，按价格降序。</summary><pre><code>SELECT id, name, price
+FROM products
+ORDER BY price DESC, id ASC
+LIMIT 10, 5;</code></pre><p>跳过 (3 − 1) × 5 = 10 行，再取 5 行。</p></details>
+<h2>最后自查</h2><ul class="checks"><li>能说清同比、环比和占比的分母。</li><li>能选择字段类型，写出主键、非空、唯一约束。</li><li>修改、删除前会先 SELECT 核对条件。</li><li>能独立组合 WHERE、GROUP BY、HAVING、ORDER BY、LIMIT。</li></ul></article><article id="page-7" aria-labelledby="title-7"><header><div class="eyebrow">STUDY NOTES / 08</div><h1 id="title-7" tabindex="-1">回到你的学习笔记</h1><p>需要查细节时再展开。</p></header><div class="callout">原笔记文字大纲，供查阅。保留原答案，部分有误，请结合纠错页阅读；不含截图。</div><details><summary>数据分析DAY01.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY01
+  了解
+    数据
+      理论
+        数据是能够被看到、听到、感知到并记录下来
+        被用于科学研究、技术设计、查证、決策等的数值
+      特性
+        数据的规律性：数据达到足够数量后会存在一定的内在规律。
+        数据的变异性：数据会跟随时间、地点、生产生活以及客观规律发生变化。
+        数据的客观性：能够记录或佐证客观事实，不随主观意愿变化。
+      作用
+        现状描述：展示过去发生了什么，评估当前业务状态和业务构成。
+        原因探究：分析现状背后的原因，为企业问题诊断提供依据。
+        未来预测：基于历史数据和趋势，预测未来业务和市场表现，支持战略规划。
+        决策支持：为市场策略、销售预测、供应链优化等关键领域提供数据驱动的决策依据。
+    小测试
+      同比/环比
+        同比
+          和去年同一时期比
+        环比
+          和紧挨着的上一个周期比
+      判断题
+        某店铺10月销量环比下降，一定是店铺运营做得不好
+          错
+        数据同比上涨，说明今年同期业绩优于去年同期
+          对
+        只要环比增长，就可以直接归功于新上任的负责人
+          错
+        同比数据可以规避淡旺季的干扰，环比更适合跨年对比
+          错
+      选择题
+        A公司在2季度末尾更换了产品经理,3季度夏季服装销售额环比降低了40%,同比增长了10%,从中可以得出的结论是?
+A.新产品经理能力低下    错
+B.3季度夏季服装不好卖  对
+C.新产品经理能力强大     不一定对
+D.2季度比3季度服装好卖  错
+          D
+        服装店9月秋装销量环比+40%，同比+20%，8月更换店长，严谨结论是？
+A. 新店长能力优秀   不一定对
+B. 9月销量高于8月、也高于去年9月   对
+C. 秋季服装市场整体爆火   错
+D. 之前的老店长能力不足  不一定对
+          B
+        外卖店铺5月单量环比-15%，同比-5%，以下说法正确的是？
+A. 5月单量比4月下降，也比去年5月差  对
+B. 只是淡季影响，店铺没有任何问题  错
+C. 店铺菜品口味变差导致单量下滑   错
+D. 4月是全年最差月份    错
+          A
+    数据分析相关技术
+  数据透视表
+    作用
+      可以从源数据列表中快速提取并汇总大量数据的交互式表格
+      使用数据透视表可以对数据快速汇总、分析、浏览以及显示数据
+    需求
+      场景说明
+        某电商公司的业务数据都存储在EXCEL中,公司需要快速统计下&quot;各性别下用户分布占比&quot;
+      数据
+      最终效果
+      操作步骤
+        创建数据透视表
+            第一步选择需要处理的数据,如果处理全部数据随便点一个空就行
+            第二步点击插入
+            第三步点击数据透视图
+            第四步创建,选择新工作表,点击确认
+        根据需求设置透视表字段
+            第一步点击字段列表
+            第二步将sex放入行,将user_id放入值
+        设置汇总方式
+            第一步点击值user_id点击值字段设置
+            第二步点击值显示方式
+            第三步选择总计的百分比
+    练习
+      使用数据透视表求各地区用户分布占比
+      效果
+    思考
+      如果数据源表格因为业务需求,发生新增行或者删除行情况,刷新数据透视表,数据会更新吗?
+        会更新
+      如果数据源表格因为业务需求,发生增加列或减少列的情况,刷新数据透视表,数据会更新吗?
+        不会更新
+      怎么能让增加列或者减少列也更新到透视表中呢?
+        将Excel普通表转为超级表
+  超级表
+    创建方法
+      方法1
+        选中需要处理的数据.快捷键ctrl + t,点击确认
+      方法2
+          第一步选中需要处理的数据,点击插入
+          第二步点击表格
+          第三步确认
+    优点
+      美观与结构：提供统一的格式和多种预设样式，使表格更加清晰、专业。
+      便捷操作：自动筛选、冻结标题行、自动扩展新数据，简化数据操作。
+      强大分析：支持数据透视表创建，结构化引用简化公式，便于数据分析。
+      高效汇总筛选：快速添加汇总行，支持切片器功能，提升数据汇总与筛选效率。
+      提升体验：快速选中、自动填充等功能，优化用户体验，提高数据录入效率。
+    练习
+      把源数据改成超级表
+  数据透视图
+    作用
+      以图表形式呈现数据透视表中的汇总数据
+      数据透视图可以更形象的对数据进行比较，反应规律，支持决策
+    需求
+      场景
+        某电商公司的业务数据都存储在EXCEL中,公司需要快速制作&quot;各性别下用户分布情况饼图&quot;
+      数据
+      最终效果
+      操作步骤
+        创建数据透视图
+            第一步点击分析
+            第二步点击数据透视图
+            第三步选择饼图
+        修改饼图
+            第一步关闭字段按钮
+            第二步修改标题
+            第三步点击次图标
+            第一步关闭图例,勾选数据标签
+            第二步从数据标签处进入
+            第三步勾选类别名称
+            第四步勾选数据标签外
+    练习
+      求各地区用户分布占比情况,最终以饼图展示
+      效果
+  电商可视化大屏(EXCEL)
+    项目背景
+      随着电商行业的快速发展，各大电商平台之间的竞争日益激烈。为了提高市场份额和盈利能力，企业需要对订单数据进行深入分析，以便更好地了解客户需求、优化营销策略和提高运营效率。本项目将通过对某电商平台的订单数据进行分析，为企业提供有关渠道、地区、性别、年龄段等方面的数据支持，帮助企业制定更有针对性的营销策略。
+    项目数据
+    项目需求
+      需求1：各渠道下的订单量
+        效果
+        步骤
+          创建数据透视表
+          行选择渠道,值选择订单量
+          创建数据透视图,选择条形图-簇状
+          关闭字段按钮
+          勾选数据标签
+          关闭图例
+          修改标题
+      需求2：各地区的实付金额
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择实付金额
+          创建数据透视图,选择柱状图-簇状
+          关闭字段按钮
+          勾选数据标签
+          图例选择下部
+          勾选标题,并修改标题
+      需求3：各地区各渠道下的实付金额
+        效果
+        步骤
+          创建数据透视表
+          列选择渠道,行选择地区,值选择实付金额
+          创建数据透视图,选择折线图
+          关闭字段按钮
+          勾选数据标题,并修改标题
+          关闭图例
+      需求4：求各渠道下的最大消费金额
+        效果
+        步骤
+          创建数据透视表
+          列选择渠道,值选择消费金额
+          值字段设置汇总方式选择最大值
+          创建数据透视图,选择柱状图
+          关闭字段按钮
+          勾选数据表
+          修改数据标题
+          修改柱状图颜色
+          关闭图例
+      需求5：计算各地区的实付金额占比
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择金额
+          值字段设置汇总方式选择总计的百分比
+          创建数据透视图选择饼图
+          关闭字段按钮
+          关闭图例
+          勾选数据标签
+          数据标签更多修改里面勾选类别名称和数据标签外
+          修改标题名称
+      需求6：各地区下男女性别实付金额占比
+        效果
+        步骤
+          创建数据透视表
+          列选择性别,行选择地区,值选择实付金额
+          值字段设置汇总方式选择列汇总的百分比
+          创建数据透视图选择柱状图
+          关闭图例
+          关闭字段按钮
+          勾选图标标题并修改
+          勾选数据表
+      需求7：以东北地区为基准，计算实付金额其余地区占东北地区的百分比
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择实付金额
+          值字段设置百分比,然后下方基本字段选择地区,基本项选择东北
+          创建数据透视图选择面积图
+          关闭图例
+          关闭字段按钮
+          修改标题
+          勾选数据表
+      需求8：以东北地区为基准，计算其余项与东北之间实付金额的差异
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择实付金额
+          值字段设置差异,然后下方基本字段选择地区,基本项选择东北
+          创建数据透视图选择柱状图
+          关闭图例
+          关闭字段按钮
+          修改标题
+          把下方柱体改成红色
+          关闭坐标轴中主要横坐标
+          勾选数据标签-数据标注
+            注意
+              微软excel可以数据标注,WPS实现不了
+      需求9：计算从2017年到2020年实付金额的环比增长率
+        效果
+        步骤
+          创建数据透视表
+          列选择创建时间(只保留年),值选择实付金额
+          值字段设置差异百分比,下方基本字段选择年,基本选项选择2017
+          创建数据透视图,选择柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+          把下方柱体改成红色
+          关闭坐标轴中主要横坐标
+          勾选数据表
+      需求10：求各地区的实付金额的累计求和
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择实付金额
+          值字段设置按某一字段汇总.下方基本字段选择地区
+          创建数据透视图,选择面积图
+          关闭字段按钮
+          关闭图例
+          修改标题
+          勾选数据标签-数据标注
+          选中标注,设置形状格式中的线条改成无线条
+          选中标注,设置数据标注格式勾选显示引导线
+      需求11：各地区的消费金额(按照地区的字母进行排序)
+        效果
+        步骤
+          创建数据透视表
+          列选择地区,值选择消费金额
+          列筛选选择字母升(默认)
+          创建数据透视图,选择柱状图-三维柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+          勾选数据标签
+      需求12：各地区的用户数（按照西北、华北、东北、华东、中南、西南排序）
+        效果
+        步骤
+          进入excel设置
+          文件-&gt;选项-&gt;高级-&gt;拉到最下面-&gt;编辑自定义列表-&gt;点击添加按照你需要的顺序输入
+            注意输入顺序时用逗号隔开,逗号需要用英文逗号
+          创建数据透视表
+          列选择地区,值选择user_id
+          值汇总方式选择计数
+          创建数据透视图,选择柱状图-三维柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+          勾选数据标签
+      需求13：各年份、各季度的实付金额
+        效果
+        步骤
+          创建数据透视表
+          列选择创建时间,值选择实付金额
+          创建时间只保留年和季度
+          创建数据透视表,选择柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+      需求14：求各年龄段(18-27,28-37,38-47,48-57,58-67)的实付金额
+        效果
+        步骤
+          创建数据库透视表
+          列选择年龄,值选择实付金额
+          选中年龄列,点击数据透视表分析,选择分组,别分填入对应的数据
+          创建数据透视图,选择柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+          勾选数据标签
+      需求15：求各渠道的实付金额(按照性别筛选)
+        效果
+        步骤
+          创建数据库透视表
+          列选择渠道,值选择实付金额
+          创建数据透视图,选择柱状图
+          关闭字段按钮
+          关闭图例
+          修改标题
+    最终效果
+      实现步骤
+        新建sheet页,重命名可视化大屏
+        选中所有单元格,设置大屏的背景色
+            颜色自行选择
+        选中标题区域,设置大屏标题背景色
+            颜色自行选择
+        给标题区域附加文字
+            创建文本框输入文字
+            编辑文字(字体,大小,颜色)
+        将之前所有的数据透视图复制到现在这个页面
+            排列没有要求,看得懂即可
+        创建切片器(筛选器)
+            拖动到页面左侧
+        切片器连接报表</pre></details><details><summary>数据分析DAY02.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY02
+  了解数据库
+    理论
+      数据库(DataBase)就是存储和管理数据的系统
+      数据按照一定的格式进行存储，用户可以对数据库中的数据进行增加、修改、删除、查询等操作
+        CRUD操作
+          C
+            create
+            新增
+          R
+            read
+            查询
+          U
+            update
+            修改
+          D
+            delete
+            删除
+    数据库分类
+      关系型数据库
+        数据以行列表格的形式进行存储
+        MySQL、Oracle、DB2、SQL Server等
+          MYSQL
+            免费
+          Oracle
+            全世界市场份额最大
+      非关系型数据库(了解)
+        键值对存储、文档存储、列式存储、图式存储
+        MongoDB、Redis、Hbase、Neo4j
+  MYSQL
+    发展史(了解)
+      1995年MYSQLAB公司发布
+      2008年SUN公司收购
+      2010年甲骨文公司收购了SUN公司
+    特点(了解)
+      C/S软件
+        C
+          Client客户端
+        S
+          Server服务端
+      免费开源
+      支持千万级数据处理
+      使用标准的SQL数据语言形式
+      支持不同的操作系统,并提供多种编程语言的操作接口
+      支持多种存储引擎
+    安装步骤
+      安装小皮
+        找到安装程序
+        打开程序
+        打开程序,下载mysql8版本
+        设置密码,推荐不动
+          默认密码为：root
+        运行mysql
+      注意
+        mac和安装失败的,前往课件使用方案二进行安装
+      配置全局变量
+        mysql的bin目录
+          桌面找到小皮右键点击进入文件安装目录
+          返回phpstudy_pro目录
+          进入mysql目录
+          复制改路径
+        全局变量配置
+          右键此电脑属性
+          点击高级系统设置
+          点击环境变量
+          配置环境变量
+            找到path进入
+            关联
+      查看MYSQL版本号
+        mysql --version
+    连接
+      命令行方式
+        连接命令
+          mysql -h数据库服务器IP -P数据库服务端口 -u用户名 -p密码
+          注意
+            如果是连接本地数据库,那么IP和端口号可以省略
+            服务器IP默认是127.0.0.1
+            数据库端口号默认是3306
+        退出命令
+          quit或者exit
+      IP地址和PORT端口
+        IP 地址：标识网络上的唯一一台设备
+        PORT 端口：标识一台设备上的一个网络程序
+        MYSQL默认端口号是3306
+      datagrip软件
+        打开课件寻找10datagroup开发工具
+        双击exe文件打开安装界面
+        修改安装路径,建议不要在C盘
+        勾选,创建桌面快捷方式
+        剩余全部下一步即可
+        连接
+          打开安装好的datagrip
+          选择不要导入设置
+          打开MYSQL的连接页面
+          输入相关连接信息并测试
+          完成
+  SQL
+    理论
+      结构化查询语言，是关系型数据库管理系统都需要遵循的规范，是操作关系型数据库的语言，只要是关系型数据库，都支持SQL
+    分类
+      DDL语句(会用)
+        定义数据库结构，用于建表、改表与删表
+      DML语句(会用)
+        操纵表数据，负责数据增、删、改
+      DQL语句(重点)
+        检索表数据，专门查询获取数据
+      DCL语句(了解)
+        管控用户，分配和回收数据库权限
+    DDL学习
+      库操作
+        创建数据库
+          CREATE DATABASE [IF NOT EXISTS] 数据库名称 [CHARSET=&#x27;utf8&#x27;];
+            IF NOT EXISTS
+              数据库不存在则创建,如果不存在则忽略,防止重复创建报错时使用
+            CHARSET=&#x27;utf8&#x27;
+              指定数据库的编码字符集，
+防止表数据存储中文时出错或乱码
+          练习
+            创建名为 `school` 的数据库，如果该库不存在才创建，字符集设置为 utf8
+              create database if not exists school charset = &#x27;utf8&#x27;;
+            创建名为 `product` 的数据库，如果该库不存在才创建，字符集设置为 utf8
+              create database if not exists product charset = &#x27;utf8&#x27;;
+        查看已有的数据库
+          SHOW DATABASES;
+        使用指定数据库
+          USE 数据库名称;
+        查看当前使用的数据库
+          SELECT database();
+        删除数据库
+          DROP DATABASE [IF EXISTS] 数据库名称
+            慎用!不用!
+        总练习
+          查看当前已有的数据库
+            show databases;
+            判断school和product是否创建成功
+          查看当前使用数据库
+            select database();
+            结果应该为空(null)
+          使用school数据库
+            use school;
+          再次查看当前使用数据库
+            select database();
+            结果为school
+          删除school数据库，如果该库存在才删除
+            drop database if exists school;
+      表操作
+        创建数据库表格
+          CREATE TABLE [IF NOT EXISTS] 表名(字段名称 数据类型 [约束][COMMENT 字段备注]......);
+            数据类型
+              常用类型
+                int
+                  整数
+                bigint
+                  整数
+                  存储位数更大的整数
+                varchar(x)
+                  字符串
+                  x可以控制字符串长度
+                char(x)
+                  字符串
+                  x可以控制字符串长度
+                datetime
+                  时间
+                decimal(x,y)
+                  小数
+                  x可以控制数据长度
+                  y可以控制小数位数
+                  注意
+                    decimal可以保证精度
+                double
+                  小数
+                区别
+                  char表示固定长度的字符串，如char(3)，如果填充&#x27;ab&#x27;时会补一个空格为&#x27;ab &#x27;，3表示字符数
+                  varchar表示可变长度的字符串，如varchar(3)，填充&#x27;ab&#x27;时就会存储&#x27;ab&#x27;，3表示字符数
+                区别
+                  decimal：定点小数，可指定总长度与小数位，精度不会丢失，适合金额
+                  double：浮点小数，存储效率高，但存在精度误差，不适合财务数据
+              拓展
+                https://dev.mysql.com/doc/refman/8.0/en/integer-types.html
+              快问快答
+                根据信息来选择不同的数据类型
+                  身高
+                  体重
+                  名字
+                  手机号
+                  身份证
+                  支付宝余额
+                  年龄
+            约束
+              理论
+                数据类型本身就是一种约束，数据约束是指在数据类型限定的基础上额外增加的要求
+              常用约束
+                主键 primary key
+                  唯一标识表中的一行记录。 MySQL 建议所有表的主键字段都叫 id， 类型为int
+                主键自增auto_increment
+                  设置主键自增之后，新增数据时，数据库会自动把id值加1
+                非空 not null
+                  此字段不允许填写空值。NULL表示空
+                唯一 unique
+                  此字段不能重复
+                默认 default
+                  不填写字段对应的值会使用默认值，如果填写时以填写为准
+                  格式
+                    default 值
+                      如果值是文字需要使用引号包裹
+            COMMENT
+              可以对字段做出备注，方便知道字段的含义
+              注意
+                备注内容需要被引号包裹
+                  例如：comment=&#x27;字段名称&#x27;
+            注意
+              约束可以不写,但是数据类型必须写
+              在SQL中有一些关键字,无法直接用于当做表名或者字段名,如果想要使用需要增加反引号进行包裹
+                查看关键字
+                  SELECT * FROM information_schema.KEYWORDS;
+              表名称与字段名称需要用下划线命名法
+            练习
+              创建一张订单表格，字段有主键id,商品名称，商品价格，购买数量，购买日期，购买人，要求每个字段都给出备注，每个字段都要给非空约束，主键需要自增
+                create table `order`(
+                    id int primary key auto_increment comment &#x27;主键ID&#x27;,
+                    product_name varchar(32) not null comment &#x27;商品名称&#x27;,
+                    buy_num int not null comment &#x27;购买数量&#x27;,
+                    buy_time datetime not null comment &#x27;购买日期&#x27;,
+                    buy_user varchar(10) not null comment &#x27;购买人&#x27;
+                );
+              创建一张用户表格，字段有主键id，名字，邮箱，年龄，手机号，性别。要求每个字段都给出备注，每个字段都要给非空约束，邮箱需要给唯一约束，性别给默认约束，默认为男，主键需要自增
+                create table user(
+                    id int primary key auto_increment comment &#x27;主键ID&#x27;,
+                    name varchar(10) not null comment &#x27;名字&#x27;,
+                    email varchar(20) not null unique comment &#x27;邮箱&#x27;,
+                    age int not null comment &#x27;年龄&#x27;,
+                    phone varchar(20) not null comment &#x27;手机号&#x27;,
+                    gender varchar(2) not null default &#x27;男&#x27; comment &#x27;性别&#x27;
+                );
+              注意
+                需要考虑是否有涉及到关键词的单词
+                需要考虑字段的设定长度
+                书写的顺序以及格式
+        查看当前数据库已有的表格
+          SHOW TABLES;
+        查看指定表格的表结构
+          DESC 表名;
+        查看表的创建表语句
+          SHOW CREATE TABLE 表名;
+        修改表名称
+          RENAME TABLE 旧表名 TO 新表名;
+        删除指定表
+          DROP TABLE [IS EXISTS] 表名;
+        总练习
+          查看当前数据库已有表格
+            show tables;
+          查看order表的表结构
+            show tables;
+          查看order表的建表语句
+            show create table `order`;
+          修改order表为orders
+            rename table `order` to orders;
+          删除orders表
+            drop table if exists orders;</pre></details><details><summary>数据分析DAY03.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY03
+  DDL学习
+    课前准备
+      导入SQL
+        create table `order`(
+            id int primary key auto_increment comment &#x27;主键ID&#x27;,
+            product_name varchar(32) not null comment &#x27;商品名称&#x27;,
+            buy_num int not null comment &#x27;购买数量&#x27;,
+            buy_time datetime not null comment &#x27;购买日期&#x27;,
+            buy_user varchar(10) not null comment &#x27;购买人&#x27;
+        );
+    表操作
+      修改字段
+        ALTER TABLE 表名 CHANGE 旧字段名 新字段名 数据类型 [约束] [COMMENT &#x27;备注&#x27;];
+      删除字段
+        ALTER TABLE 表名 DROP 字段名;
+      新增字段
+        ALTER TABLE 表名 ADD 字段名 类型 [约束] [COMMENT &#x27;备注&#x27;];
+    总练习
+      修改购买人buy_user字段为buy_user_name 并且保留所有的约束
+        alter table orders change buy_user buy_user_name
+        varchar(10) not null comment &#x27;购买人&#x27;;
+      新增商品分类字段，category，字符串类型，非空约束
+        alter table orders add category varchar(32) not null comment &#x27;商品类型&#x27;;
+      删除购买人字段
+        alter table orders drop buy_user_name;
+  DML学习
+    理论
+      操纵表数据，负责数据增、删、改
+    课前准备
+      导入SQL
+        -- 创建第三天的数据库
+        CREATE DATABASE if not exists DAY03 charset = &#x27;utf8&#x27;;
+        
+        -- 使用数据库
+        USE day03;
+        
+        -- 创建学生表
+        CREATE TABLE `student` (
+          `id` INT PRIMARY KEY AUTO_INCREMENT COMMENT &#x27;主键id&#x27;,
+          `code` VARCHAR(20) NOT NULL UNIQUE COMMENT &#x27;学号&#x27;,
+          `name` VARCHAR(20) NOT NULL COMMENT &#x27;姓名&#x27;,
+          `gender` CHAR(2) DEFAULT &#x27;男&#x27; COMMENT &#x27;性别&#x27;,
+          `age` TINYINT COMMENT &#x27;年龄&#x27;,
+          `dept` VARCHAR(30) COMMENT &#x27;所在院系&#x27;,
+          `phone` VARCHAR(30) COMMENT &#x27;手机号&#x27;
+        );
+        
+        -- 创建商品表
+        CREATE TABLE goods (
+            id INT PRIMARY KEY COMMENT &#x27;商品编号&#x27;,
+            goods_name VARCHAR(50) NOT NULL COMMENT &#x27;商品名称&#x27;,
+        	goods_code VARCHAR(50) NOT NULL COMMENT &#x27;商品编号&#x27;,
+            stock INT COMMENT &#x27;库存&#x27;,
+            produce_date DATE COMMENT &#x27;生产日期&#x27;,
+            price DECIMAL(10,2) COMMENT &#x27;价格&#x27;,
+            weight DECIMAL(5,2) COMMENT &#x27;重量&#x27;
+        );
+    操作
+      新增
+        格式
+          INSERT INTO 表(字段1,字段2,字段3....) VALUE(值1,值2,值3.....)
+            指定字段插入,一次性插入一行
+            注意
+              字符串和日期的值必须加单引号
+              如果字段为非空字段(not null),在新增时必须添加此字段
+              主键如果不想指定可以设置为null,让MYSQL自行管理
+              如果给了唯一约束,新增重复数据会报错
+              主键约束如果手动添加指定值,会重新按照现在主键字段最大值进行计算
+          INSERT INTO 表 VALUE(值1,值2,值3.....)
+            不指定字段插入.一次性插入一行
+            注意
+              字段可以省略,如果省略则默认新增全部字段,填写值时也要填写同样数量,并且字段顺序要严格遵守
+          INSERT INTO 表 VALUES(值1,值2,值3.....),(值1,值2,值3.....)...
+            不指定字段插入,一次性插入多行
+            注意
+              VALUE变成了VALUES
+              每一行数据之间使用逗号隔开
+          INSERT INTO(字段1,字段2,字段3....) 表 VALUES(值1,值2,值3.....),(值1,值2,值3.....)...
+            指定字段插入,一次性插入多行
+          分别用上述四种方式,往学生表插入数据
+        需求
+          -- 需求1:使用格式一新增一个商品(库存:10,商品名称:手机,编号:1010,生产日期:今日,价格:4999.99,重量:2.00)
+            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight) value (1, &#x27;手机&#x27;, &#x27;1010&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 4999.99, 2.00);
+          -- 需求2:使用格式2新增一个商品(库存:10,商品名称:电脑,编号:1012,生产日期:今日,价格:20000,重量:5.00)
+            insert into goods value (2, &#x27;电脑&#x27;, &#x27;1012&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 20000, 5.00);
+          -- 需求3:使用格式3新增两个商品
+-- (库存:10,商品名称:耳机,编号:1013,生产日期:今日,价格:1500,重量:0.3)
+-- (库存:10,商品名称:平板,编号:1014,生产日期:今日,价格:8000,重量:1.00)
+            insert into goods values (3, &#x27;耳机&#x27;, &#x27;1013&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 1500, 0.3),(4 , &#x27;平板&#x27;,&#x27;1014&#x27;,10,&#x27;2026-10-08 00:00:00&#x27;,8000,1.00);
+          -- 需求4:使用格式4新增两个商品
+-- (库存:10,商品名称:衣服,编号:2000,生产日期:今日,价格:200,重量:0.1)
+-- (库存:10,商品名称:鞋子,编号:2001,生产日期:今日,价格:500,重量:0.5)
+            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight) values (5, &#x27;衣服&#x27;, &#x27;2000&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 200, 0.1),(6 , &#x27;鞋子&#x27;,&#x27;2001&#x27;,10,&#x27;2026-10-08 00:00:00&#x27;,500,0.5);
+      修改
+        格式
+          UPDATE 表名 SET 字段名=值,字段名=值 [WHERE 条件]
+          WHERE用来加筛选条件,只拿满足条件的数据,不满足的数据过滤掉
+            例如想要找价格大于1000的商品
+              where price &gt; 1000
+          比较运算符
+        注意
+          update不添加条件就是修改全表,谨慎使用
+        需求
+          -- 需求1:修改价格小于1000的商品,库存改为100
+            update goods set stock = 100 where price &lt; 1000;
+          -- 需求2:修改商品手机的价格为10086
+            update goods set price = 10086 where goods_name = &#x27;手机&#x27;;
+          -- 需求3:修改重量大于3的商品,库存改为99
+            update goods set stock = 99 where weight &gt; 3;
+      删除
+        格式
+          DELETE FROM 表名 [WHERE  条件控制]
+          TRUNCATE TABLE 表名
+        注意
+          delete不添加条件就是删除全表,谨慎使用
+        DELETE 和 TRUNCATE的区别
+          他们两者都是删除表中数据,但是TRUNCATE会清空主键自增序列,从1开始
+        需求
+          -- 需求1:删除名字叫手机的商品
+            delete from goods where goods_name = &#x27;手机&#x27;;
+          -- 需求2:删除价格小于1000元的商品
+            delete from goods where price &lt; 1000;
+          -- 需求3:清空表
+            truncate table goods;
+    总练习
+      需求：创建一张员工表 emp_study，字段要求：
+emp_id：员工编号，主键，int 类型
+emp_name：员工姓名，非空，varchar(20)
+emp_phone：手机号，唯一约束，varchar(11)
+emp_salary：工资，double
+emp_dept：部门，varchar (30)
+        create table emp_study(
+            emp_id int primary key comment &#x27;员工编号&#x27;,
+            emp_name varchar(20) not null comment &#x27;员工名称&#x27;,
+            emp_phone varchar(11) unique comment &#x27;手机号&#x27;,
+            emp_salary double comment &#x27;工资&#x27;,
+            emp_dept varchar(30) comment &#x27;部门&#x27;
+        );
+      新增三条员工数据
+        insert into emp_study values
+        (1,&#x27;张三&#x27;,&#x27;13800138001&#x27;,12000,&#x27;开发部&#x27;)
+        ,(2,&#x27;李四&#x27;,&#x27;13800138002&#x27;,12000,&#x27;测试部&#x27;)
+        ,(3,&#x27;王五&#x27;,&#x27;13800138003&#x27;,18000,&#x27;开发部&#x27;);
+      把开发部所有人工资上调 1000
+        update emp_study set emp_salary = emp_salary + 1000;
+      删除工资等于 15000 的员工
+        delete from emp_study where emp_salary &gt; 15000;</pre></details><details><summary>数据分析DAY04.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY04
+  DQL学习(重点)
+    理论
+      数据查询语言，用来查询数据库中表的记录
+    操作
+      课前准备
+        导入SQL数据
+          # 创建day04库
+          CREATE DATABASE IF NOT EXISTS day04 CHARSET=utf8;
+          
+          # 使用day04库
+          USE day04;
+          
+          # 建商品表
+          CREATE TABLE products
+          (
+              id          INT PRIMARY KEY AUTO_INCREMENT COMMENT &#x27;商品ID&#x27;,
+              name        VARCHAR(24)    NOT NULL COMMENT &#x27;商品名称&#x27;,
+              price       DECIMAL(10, 2) NOT NULL COMMENT &#x27;商品价格&#x27;,
+              score       DECIMAL(5, 2) COMMENT &#x27;商品评分&#x27;,
+              is_self     VARCHAR(8) COMMENT &#x27;是否自营&#x27;,
+              category_id INT COMMENT &#x27;商品类别ID&#x27;
+          );
+          
+          # 创建商品分类表格
+          CREATE TABLE category
+          (
+              id   INT PRIMARY KEY AUTO_INCREMENT COMMENT &#x27;商品类别ID&#x27;,
+              name VARCHAR(24) NOT NULL COMMENT &#x27;类别名称&#x27;
+          );
+          
+          # 添加分类数据
+          INSERT INTO category
+          VALUES (1, &#x27;手机&#x27;),
+                 (2, &#x27;电脑&#x27;),
+                 (3, &#x27;美妆&#x27;),
+                 (4, &#x27;家居&#x27;);
+          
+          # 新增商品数据
+          INSERT INTO products
+          VALUES (1, &#x27;华为Mate50&#x27;, 5499.00, 9.70, &#x27;自营&#x27;, 1),
+                 (2, &#x27;荣耀80&#x27;, 2399.00, 9.50, &#x27;自营&#x27;, 1),
+                 (3, &#x27;荣耀80&#x27;, 2199.00, 9.30, &#x27;非自营&#x27;, 1),
+                 (4, &#x27;红米note 11&#x27;, 999.00, 9.00, &#x27;非自营&#x27;, 1),
+                 (5, &#x27;联想小新14&#x27;, 4199.00, 9.20, &#x27;自营&#x27;, 2),
+                 (6, &#x27;惠普战66&#x27;, 4499.90, 9.30, &#x27;自营&#x27;, 2),
+                 (7, &#x27;苹果Air13&#x27;, 6198.00, 9.10, &#x27;非自营&#x27;, 2),
+                 (8, &#x27;华为MateBook14&#x27;, 5599.00, 9.30, &#x27;非自营&#x27;, 2),
+                 (9, &#x27;兰蔻小黑瓶&#x27;, 1100.00, 9.60, &#x27;自营&#x27;, 3),
+                 (10, &#x27;雅诗兰黛粉底液&#x27;, 920.00, 9.40, &#x27;自营&#x27;, 3),
+                 (11, &#x27;阿玛尼红管405&#x27;, 350.00, NULL, &#x27;非自营&#x27;, 3),
+                 (12, &#x27;迪奥996&#x27;, 330.00, 9.70, &#x27;非自营&#x27;, 3);
+      简单查询
+        格式
+          SELECT * FROM 表名
+            查询表中所有数据
+          SELECT 字段名1,字段名2,字段名3...FROM 表名
+            查询表中指定列数据
+          SELECT 字段名1 as 别名,字段名2 as 别名2... FROM 表名
+            查询表中指定列数据,并给结果起别名
+          SELECT 表别名.字段名1,表别名.字段名2..... FROM 表名 as 表别名
+            查询表中指定列数据并且给表起别名
+          关键字
+            SELECT
+              查什么
+            FROM
+              查哪里
+        注意
+          *号代表表中的所有列
+          as可以省略不写,名称和别名之间用空格隔开
+          起别名不要使用关键字,如果别名和关键字相同,使用``反引号包裹
+        需求
+          查询商品表中所有的商品
+            select * from products;
+          查看所有商品的名称和价格
+            select name,price from products;
+          查看所有商品的名称和价格,要求给字段名起别名展示,别名就叫中文
+            select name as 商品名称,price as 价格 from products;
+          查看所有商品的名称和价格,要求给表名起别名并使用
+            select p.name,p.price from products as p;
+      条件查询
+        作用
+          查询每一行数据时，对WHERE后的条件进行判断，满足条件的数据才会显示，不满足的过滤
+        格式
+          SELECT * FROM 表名 WHERE 条件
+          关键字
+            WHERE
+        条件运算符
+          比较运算符
+            作用
+              用来对两个数据进行比较，比较的结果是成立(True)或不成立(False)。
+            运算符
+              &gt;
+                大于
+              &lt;
+                小于
+              =
+                等于
+              &gt;=
+                大于等于
+              &lt;=
+                小于等于
+              !=
+                不等于
+            需求
+              查询自营的所有商品信息
+                select * from products where is_self = &#x27;自营&#x27;;
+              查询价格低于1000的所有商品信息
+                select * from products where price &lt; 1000;
+              查询价格大于等于999的所有商品信息
+                select * from products where price &gt;= 999;
+          逻辑运算符
+            作用
+              连接多个条件，表示多个条件之间的与、或、非关系
+            运算符
+              AND
+                并且
+              OR
+                或者
+              NOT
+                取反
+            需求
+              查询自营并且价格大于2000的所有商品信息
+                select * from products where is_self = &#x27;自营&#x27; and price &gt; 2000;
+              查询价格不大于2000的所有商品信息
+                select * from products where not price &gt; 2000;
+              查询价格高于4000或低于1000的所有商品信息
+                select * from products where price &gt; 4000 or price &lt; 1000;
+          范围查询
+            作用
+              查询指定范围内的数据
+            运算符
+              字段名称 BETWEEN 值1  AND 值2
+                表示在一个连续的范围内查询
+              字段名称 IN(值1,值2....)
+                表示在一个非连续的范围内查询
+                注意
+                  使用IN扣号内一定要有数据
+            需求
+              查询价格在999~4199价格之间的数据
+                select * from products where price between 999 and 4199;
+              查询价格是999,2199,4199的数据
+                select * from products where price in (999,2199,4199);
+          模糊查询
+            作用
+              模糊查询，查询含有某些内容的数据
+            运算符
+              字段名称 LIKE &#x27;%值%&#x27;
+                %表示任意多个字符
+                注意
+                  `%` 放在值左侧：匹配以该值结尾的内容
+                  `%` 放在值右侧：匹配以该值开头的内容
+                  `%` 放在值两侧：匹配包含该值的内容
+              字段名称 LIKE &#x27;_值_&#x27;
+                _表示任意一个字符
+                注意
+                  `_值_`：目标值前后各有1个任意字符
+                  `_值`：目标值前面有1个任意字符，以该值结尾
+                  `值_`：目标值后面有1个任意字符，以该值开头
+                  `_`可以有多个,每写一个代表一个字符
+            需求
+              查询名字以&#x27;华为&#x27;开头的数据
+                select * from products where name like &#x27;华为%&#x27;;
+              查询所有商品中,商品名称包含&#x27;小&#x27;字的商品信息
+                select * from products where name like &#x27;%小%&#x27;;
+              查询所有商品中，商品名以&#x27;14&#x27;结尾并且是6个字是商品信息
+                select * from products where name like &#x27;____14&#x27;;
+          空值判断
+            作用
+              筛选出值为NULL的数据
+            运算符
+              字段名称 IS NULL
+                值是NULL，则为True
+              字段名称 IS NOT NULL
+                值不是NULL，则为True
+            注意
+              空值的判断一定不能使用=和!=
+            需求
+              查询未评分过的商品信息
+                select * from products where score is null;
+              查询所有评分过的商品信息
+                select * from products where score is not null;
+      排序查询
+        作用
+          按指定列对查询结果进行排序
+        格式
+          SELECT * FROM 表名 ORDER BY 字段名 [ASC/DESC],字段名[ASC/DESC]...
+          关键字
+            ORDER BY
+              排序关键字
+            ASC
+              升序,从小到大
+            DESC
+              降序.从大到小
+        注意
+          升序时 ASC 可以省略不写，默认为升序
+          可以根据多列排序，前列值相同的数据，再根据后列值排序
+        需求
+          查询所有商品,按照价格从高到低进行排序
+            select * from products order by price desc;
+          查询所有商品,先按自营和非自营排序,再按价格从低到高排序
+            select * from products order by is_self, price;
+          查询价格高于2000的商品，并按照价格从高到低进行排序
+            select * from products where price &gt; 2000 order by price desc;
+      聚合函数
+        理论
+          聚合函数又叫组函数、统计函数，用来对表中的指定列数据进行统计计算
+        格式
+          SELECT
+           聚合函数(字段名)
+           ...
+FROM  表名;
+        常用的聚合函数
+          count(字段名)
+            计数
+            拓展
+              count(字段名)这种写法会忽略null值,如果想精确查询到的行数可以使用count(*)
+          max(字段名)
+            最大值
+          min(字段名)
+            最小值
+          sum(字段名)
+            求和
+          avg(字段名)
+            平均值
+          注意
+            聚合函数的计算会忽略null值
+        需求
+          统计所有商品价格的平均值
+            select avg(price) from products;
+          统计自营商品的数量
+            select count(*) from products where is_self = &#x27;自营&#x27;
+      分组查询
+        理论
+          对多行数据做统计运算，把多条输入合并成一个结果的函数
+        格式
+          SELECT
+分组字段,
+聚合函数
+FROM 表名
+GROUP BY 分组字段,...
+[HAVING 条件]
+            HAVING可以对分组后聚合函数进行过滤,WHERE只能对分组前的数据进行过滤
+          关键字
+            GROUP BY
+              分组
+            HAVING
+              分组后过滤
+        注意
+          GROUP BY分组聚合分为两步：先分组，再聚合
+            先分组：把表数据按照指定列的值进行划分，值相同的数据划分到同一个组
+            在聚合:分别针对每一组数据使用聚合函数进行统计
+          分组之后，SELECT后面查询的字段，必须满足下列2种情况之一
+            字段是分组字段【即在GROUP BY之后出现】
+            字段被聚合函数统计【聚合函数(字段)】
+        需求
+          统计每个分类中自营商品和非自营商品的平均价格
+            select
+            is_self,
+            avg(price)
+            from products
+            group by is_self;
+          统计每个分类商品的平均评分，并筛选平均评分大于9.5的分类
+            select
+            category_id,
+            avg(score)
+            from products
+            group by category_id
+            having avg(score) &gt; 9.5;
+      LIMIT查询
+        理论
+          获取查询结果中指定范围内的行
+        格式
+          SELECT
+字段列表
+FROM
+表名
+LIMIT N,M
+            M:表示开始索引,默认是0,代表从第M+1行开始
+            N:表示查询条数,提取多少条数据
+          关键字
+            LIMIT
+        注意
+          当LIMIT所查询的数据不存在时,不报错只是没有数据
+          如果从头开始M可以省略不写
+        需求
+          获取所有商品中，价格次高（第二高）的商品信息
+            select
+            *
+            from products
+            order by price desc
+            limit 1,1;
+          获取所有自营商品中，评分最高的商品信息
+            select
+            *
+            from products
+            order by score desc
+            limit 1;
+      SQL语句的执行顺序(拓展)
+        FROM -&gt; WHERE -&gt; GROUP BY -&gt; 聚合函数 -&gt; HAVING -&gt; 	SELECT -&gt; DISTINCT -&gt; ORDER BY -&gt; LIMIT</pre></details></article><div class="pager"><button class="action" id="prev" onclick="show(current-1,true)">← 上一页</button><span id="count" aria-live="polite"></span><button class="action" id="next" onclick="show(current+1,true)">下一页 →</button></div></main><script>let current=0;const total=document.querySelectorAll('article').length;function show(n,focus=false){current=Math.max(0,Math.min(total-1,n));document.querySelectorAll('article').forEach((el,i)=>{el.classList.toggle('active',i===current);el.hidden=i!==current});document.querySelectorAll('nav button').forEach((el,i)=>{el.classList.toggle('active',i===current);if(i===current)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});document.getElementById('count').textContent=(current+1)+' / '+total;document.getElementById('crumb').textContent=document.querySelectorAll('nav button')[current].textContent.trim();document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===total-1;document.getElementById('progress').style.width=((current+1)/total*(window.innerWidth>850?window.innerWidth-276:window.innerWidth))+'px';history.replaceState(null,'','#chapter-'+(current+1));window.scrollTo(0,0);if(focus)document.getElementById('title-'+current).focus({preventScroll:true})}document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select,summary,button,a,[contenteditable]'))return;if(e.key==='ArrowRight'){e.preventDefault();show(current+1,true)}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1,true)}});const initial=parseInt(location.hash.replace('#chapter-',''),10);show(Number.isFinite(initial)?initial-1:0);window.addEventListener('resize',()=>show(current));function printAll(){document.querySelectorAll('article').forEach(el=>el.hidden=false);window.print();show(current)}window.addEventListener('beforeprint',()=>document.querySelectorAll('article').forEach(el=>el.hidden=false));window.addEventListener('afterprint',()=>show(current));</script></body></html>
