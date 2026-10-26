@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8f4"><meta name="description" content="数据分析四天学习手册：Excel、MySQL 与 SQL，含重点速记、纠错和复习题。"><title>Dark Horse · 数据分析学习手册</title><link rel="stylesheet" href="assets/style.css?v=2"><script>try{if(localStorage.getItem('dh-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script><script src="assets/app.js?v=2" defer></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8f4"><meta name="description" content="数据分析八天学习手册：Excel、MySQL 与 SQL，含重点速记、纠错和复习题。"><title>Dark Horse · 数据分析学习手册</title><link rel="stylesheet" href="assets/style.css?v=3"><script>try{if(localStorage.getItem('dh-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script><script src="assets/app.js?v=3" defer></script></head>
 <body><svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4"/></symbol><symbol id="i-print" viewBox="0 0 24 24"><path d="M6 8V3h12v5M6 17H3V9h18v8h-3M6 14h12v7H6Z"/><path d="M17 11h1"/></symbol><symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4Z"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15v-4m5 4V7m5 8V4"/></symbol><symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-5 3 2-18"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="m14 4 6 6M4 20l5-1L21 7l-5-5L4 14Z"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2Z"/><path d="M12 9v5m0 3h.01"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C5 1 2 10 6 15s15 3 14-12ZM4 21 15 10"/></symbol></svg><a class="skip-link" href="#reading">跳到正文</a><div class="reading-line" id="reading-line"></div><button id="drawer-shade" class="drawer-shade" aria-label="关闭目录" tabindex="-1"></button>
-<aside class="sidebar" aria-label="学习手册"><a class="brand" href="#chapter-1"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><span>Dark Horse<span class="brand-sub">学习日志 / LEARNING LOG</span></span></a><button class="search-launch" type="button"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>搜索知识点</span><kbd>⌘ K</kbd></button><nav aria-label="章节目录"><button class="nav-item" data-page="0" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><span>学习总览</span><span class="nav-status" aria-hidden="true"></span></button><div class="nav-label">四天学习路径</div><button class="nav-item" data-page="1" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><span>Excel 汇总与展示</span><span class="nav-status" aria-hidden="true">01</span></button><button class="nav-item" data-page="2" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><span>MySQL 基础</span><span class="nav-status" aria-hidden="true">02</span></button><button class="nav-item" data-page="3" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></span><span>数据维护</span><span class="nav-status" aria-hidden="true">03</span></button><button class="nav-item" data-page="4" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><span>SQL 查询</span><span class="nav-status" aria-hidden="true">04</span></button><div class="nav-label">巩固与复习</div><button class="nav-item" data-page="5" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg></span><span>重点纠错</span><span class="nav-status" aria-hidden="true"></span></button><button class="nav-item" data-page="6" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><span>练习与复习</span><span class="nav-status" aria-hidden="true"></span></button><div class="nav-label">资料</div><button class="nav-item" data-page="7" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg></span><span>原笔记索引</span><span class="nav-status" aria-hidden="true"></span></button></nav><div class="sidebar-bottom"><div class="progress-title"><span>我的学习进度</span><b id="completion-label">0 / 7</b></div><div class="completion-track"><i id="completion-fill"></i></div><p>每一点积累，都有意义。</p><div class="sidebar-footer"><span class="online-dot"></span> 笔记随身 · 离线可读<span>VOL. 01</span></div></div></aside>
+<aside class="sidebar" aria-label="学习手册"><a class="brand" href="#overview"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><span>Dark Horse<span class="brand-sub">学习日志 / LEARNING LOG</span></span></a><button class="search-launch" type="button"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>搜索知识点</span><kbd>⌘ K</kbd></button><nav aria-label="章节目录"><button class="nav-item" data-page="0" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><span>学习总览</span><span class="nav-status" aria-hidden="true"></span></button><div class="nav-label">基础：Excel 与 SQL</div><button class="nav-item" data-page="1" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><span>DAY 01 · Excel 分析</span><span class="nav-status" aria-hidden="true">01</span></button><button class="nav-item" data-page="2" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><span>DAY 02 · MySQL 基础</span><span class="nav-status" aria-hidden="true">02</span></button><button class="nav-item" data-page="3" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></span><span>DAY 03 · 数据维护</span><span class="nav-status" aria-hidden="true">03</span></button><button class="nav-item" data-page="4" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><span>DAY 04 · SQL 查询</span><span class="nav-status" aria-hidden="true">04</span></button><div class="nav-label">进阶：关联与函数</div><button class="nav-item" data-page="5" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><span>DAY 05 · 多表查询</span><span class="nav-status" aria-hidden="true">05</span></button><button class="nav-item" data-page="6" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><span>DAY 06 · MySQL 函数</span><span class="nav-status" aria-hidden="true">06</span></button><div class="nav-label">应用：BI 与项目</div><button class="nav-item" data-page="7" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><span>DAY 07 · FineBI</span><span class="nav-status" aria-hidden="true">07</span></button><button class="nav-item" data-page="8" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><span>DAY 08 · 电商项目</span><span class="nav-status" aria-hidden="true">08</span></button><div class="nav-label">巩固与复习</div><button class="nav-item" data-page="9" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg></span><span>重点纠错</span><span class="nav-status" aria-hidden="true"></span></button><button class="nav-item" data-page="10" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><span>练习与复习</span><span class="nav-status" aria-hidden="true"></span></button><div class="nav-label">资料</div><button class="nav-item" data-page="11" type="button"><span class="nav-icon"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg></span><span>原笔记索引</span><span class="nav-status" aria-hidden="true"></span></button></nav><div class="sidebar-bottom"><div class="progress-title"><span>我的学习进度</span><b id="completion-label">0 / 11</b></div><div class="completion-track"><i id="completion-fill"></i></div><p>每一点积累，都有意义。</p><div class="sidebar-footer"><span class="online-dot"></span> 笔记随身 · 离线可读<span>VOL. 01</span></div></div></aside>
 <div class="app-shell"><header class="topbar"><div class="topbar-left"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="打开目录" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button><span class="breadcrumb">学习手册 <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg> <span id="crumb">学习总览</span></span></div><div class="topbar-actions"><span class="edition">数据分析 · 入门篇</span><button class="icon-button search-launch small-search" aria-label="搜索知识点"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button><button class="icon-button" id="theme-toggle" aria-label="切换深色模式" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></button><button class="icon-button" id="print-button" aria-label="打印或保存为 PDF"><svg class="icon" aria-hidden="true"><use href="#i-print"/></svg></button><span class="avatar" aria-label="Dark Horse 学习日志">DH</span></div></header>
-<main id="reading" class="reading-layout"><div class="reading-main"><article data-chapter="0" id="page-0" aria-labelledby="title-0"><header class="hero"><div class="hero-copy"><div class="eyebrow"><span class="tiny-dot"></span> 学习地图<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-0" tabindex="-1">把零散知识，<br><span class="text-green">连成一条线。</span></h1><p>从 Excel 到 SQL，整理四天的学习重点。<br>少一点死记硬背，多一点融会贯通。</p><div class="hero-actions"><button class="primary" id="continue-reading">开始学习 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="hero-footnote">4 天笔记 · 随时回顾</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-grid"></div><div class="art-note"><div class="art-note-head"><span class="tiny-dot"></span> KNOWLEDGE, CONNECTED</div><div class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-axis">EXCEL <span>→</span> SQL</div></div><div class="art-tag tag-one"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg> 从数据到洞察</div><div class="art-tag tag-two"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> SELECT your future</div><span class="art-orbit"></span></div></header>
-<div class="section-title"><h2 id="section-0-0">四天，一步一步来</h2><span>YOUR LEARNING PATH</span></div><div class="road"><button type="button" class="day-card day-1" data-open="1"><span class="day-top"><span class="day-number">DAY 01</span><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><strong>汇总与展示</strong><span class="day-description">透视表 → 占比 → 图表</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-2" data-open="2"><span class="day-top"><span class="day-number">DAY 02</span><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><strong>建库与建表</strong><span class="day-description">字段类型 → 数据约束</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-3" data-open="3"><span class="day-top"><span class="day-number">DAY 03</span><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></span><strong>改结构、改记录</strong><span class="day-description">ALTER / INSERT / UPDATE / DELETE</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-4" data-open="4"><span class="day-top"><span class="day-number">DAY 04</span><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><strong>筛选与统计</strong><span class="day-description">WHERE → GROUP BY → ORDER BY → LIMIT</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></div>
-<h2 id="section-0-1">先记住这 4 句话</h2><ol class="keypoints"><li><b>做分析，先定口径：</b>统计什么、按什么分、和谁比较。</li><li><b>做透视表，先选维度和指标：</b>地区是维度，金额是指标。</li><li><b>改数据，先查范围：</b>UPDATE / DELETE 漏掉 WHERE，会影响全表。</li><li><b>写查询，先读懂题目：</b>“自营”“每个分类”“前 5 条”都要落实到 SQL。</li></ol>
-<h2 id="section-0-2">Excel 与 SQL 的对应关系</h2><table><tr><th>想做什么</th><th>Excel</th><th>SQL</th></tr><tr><td>筛选记录</td><td>筛选器</td><td>WHERE</td></tr><tr><td>按地区求和</td><td>地区放行，金额放值</td><td>GROUP BY + SUM</td></tr><tr><td>金额从高到低</td><td>降序</td><td>ORDER BY … DESC</td></tr></table><p class="note">依据你上传的 DAY01–DAY04 笔记整理；纠错单列，原文见末页。补充建议已标注。</p><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="0"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="1" id="page-1" aria-labelledby="title-1"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 01<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-1" tabindex="-1">Excel：分组汇总，看清占比</h1><p>重点：维度、指标、汇总方式、分母。</p></header>
+<main id="reading" class="reading-layout"><div class="reading-main"><article data-chapter="0" data-key="overview" id="page-0" aria-labelledby="title-0"><header class="hero"><div class="hero-copy"><div class="eyebrow"><span class="tiny-dot"></span> 学习地图<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-0" tabindex="-1">把零散知识，<br><span class="text-green">连成一条线。</span></h1><p>从 Excel 到 SQL，整理八天的学习重点。<br>少一点死记硬背，多一点融会贯通。</p><div class="hero-actions"><button class="primary" id="continue-reading">开始学习 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="hero-footnote">8 天笔记 · 随时回顾</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-grid"></div><div class="art-note"><div class="art-note-head"><span class="tiny-dot"></span> KNOWLEDGE, CONNECTED</div><div class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-axis">EXCEL <span>→</span> SQL</div></div><div class="art-tag tag-one"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg> 从数据到洞察</div><div class="art-tag tag-two"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> SELECT your future</div><span class="art-orbit"></span></div></header><div class="learning-route" aria-label="学习路径"><span>Excel 汇总</span><b>→</b><span>SQL 取数与处理</span><b>→</b><span>FineBI 展示</span><b>→</b><span>电商项目</span></div>
+<div class="section-title"><h2 id="section-0-0">八天，一步一步来</h2><span>YOUR LEARNING PATH</span></div><div class="road"><button type="button" class="day-card day-1" data-open="1"><span class="day-top"><span class="day-number">DAY 01</span><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><strong>汇总与展示</strong><span class="day-description">透视表 → 占比 → 图表</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-2" data-open="2"><span class="day-top"><span class="day-number">DAY 02</span><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><strong>建库与建表</strong><span class="day-description">字段类型 → 数据约束</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-3" data-open="3"><span class="day-top"><span class="day-number">DAY 03</span><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></span><strong>改结构、改记录</strong><span class="day-description">ALTER / INSERT / UPDATE / DELETE</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-4" data-open="4"><span class="day-top"><span class="day-number">DAY 04</span><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><strong>筛选与统计</strong><span class="day-description">WHERE → GROUP BY → ORDER BY → LIMIT</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-1" data-open="5"><span class="day-top"><span class="day-number">DAY 05</span><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span><strong>多表关联</strong><span class="day-description">JOIN → 自连接 → 子查询</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-2" data-open="6"><span class="day-top"><span class="day-number">DAY 06</span><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><strong>函数与处理</strong><span class="day-description">数字 → 文本 → 日期 → 判断</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-3" data-open="7"><span class="day-top"><span class="day-number">DAY 07</span><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span><strong>FineBI 仪表板</strong><span class="day-description">接数据 → 做组件 → 钻取</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button><button type="button" class="day-card day-4" data-open="8"><span class="day-top"><span class="day-number">DAY 08</span><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><strong>电商项目实战</strong><span class="day-description">分层 → 指标 → SQL → 大屏</span><span class="day-bottom"><span class="card-state">进入章节</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></div>
+<h2 id="section-0-1">八天内容，记住这 4 句话</h2><ol class="keypoints"><li><b>做分析，先定口径：</b>统计什么、按什么分、和谁比较。</li><li><b>做透视表，先选维度和指标：</b>地区是维度，金额是指标。</li><li><b>改数据，先查范围：</b>UPDATE / DELETE 漏掉 WHERE，会影响全表。</li><li><b>写查询，先读懂题目：</b>先查明细，再做汇总；保留报表需要的筛选维度。</li></ol>
+<h2 id="section-0-2">Excel 与 SQL 的对应关系</h2><table><tr><th>想做什么</th><th>Excel</th><th>SQL</th></tr><tr><td>筛选记录</td><td>筛选器</td><td>WHERE</td></tr><tr><td>按地区求和</td><td>地区放行，金额放值</td><td>GROUP BY + SUM</td></tr><tr><td>金额从高到低</td><td>降序</td><td>ORDER BY … DESC</td></tr></table><p class="note">依据你上传的 DAY01–DAY08 笔记整理；纠错单列，原文见末页。补充建议已标注。</p><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="0"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="1" data-key="day-01" id="page-1" aria-labelledby="title-1"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 01<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-1" tabindex="-1">Excel：分组汇总，看清占比</h1><p>重点：维度、指标、汇总方式、分母。</p></header>
 <div class="callout"><b>透视表四问：</b>按什么分？统计什么？怎么汇总？占谁的比例？</div>
 <h2 id="section-1-0">1. 同比与环比</h2><table><tr><th>指标</th><th>和谁比较</th><th>增长率</th></tr><tr><td>同比</td><td>去年同期</td><td>（本期 − 去年同期）÷ 去年同期</td></tr><tr><td>环比</td><td>紧邻的上期</td><td>（本期 − 上期）÷ 上期</td></tr></table><p><b>记住：</b>销量上涨不等于某个人带来的效果；基期为 0 时不能直接套公式。</p>
 <h2 id="section-1-1">2. 透视表，按这 4 步做</h2><ol><li><b>整理数据：</b>保留标题，用 Ctrl + T 转为超级表。</li><li><b>放字段：</b>地区、渠道放行或列；金额、数量放值。</li><li><b>选汇总：</b>金额求和、记录计数、最高消费取最大值。</li><li><b>查口径：</b>占比看分母，新增数据后检查范围并刷新。</li></ol>
 <h2 id="section-1-2">3. 占比看分母</h2><p>假设：<b>地区在行，性别在列</b>。</p><table><tr><th>想看什么</th><th>值显示方式</th></tr><tr><td>各地区占全部金额多少</td><td>总计百分比</td></tr><tr><td>每个地区内部的男女占比</td><td><b>行汇总百分比</b></td></tr><tr><td>某一性别的金额分布在哪些地区</td><td>列汇总百分比</td></tr></table>
 <h2 id="section-1-3">4. 图表怎么选</h2><p><b>比大小：</b>条形 / 柱形　<b>看时间趋势：</b>折线　<b>看少量类别占比：</b>饼图。</p><p>大屏流程：透视表 → 图表 → 排版 → 切片器连接报表。</p>
 <details><summary>展开：电商练习的 5 类做法</summary><ul><li><b>求和 / 最大值：</b>地区金额、渠道订单量、渠道最大消费。</li><li><b>交叉分析：</b>地区 × 渠道；地区 × 性别。</li><li><b>基准比较：</b>与东北相比的百分比或差额。</li><li><b>排序与分组：</b>自定义地区顺序；日期按年、季度；年龄按区间。</li><li><b>增长与累计：</b>逐年增长选“上一项”；累计先明确排序。</li></ul></details>
-<div class="callout"><b>易错：</b>用户 ID 计数不一定是去重用户数；新增行列能否纳入，取决于数据源范围。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="1"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="2" id="page-2" aria-labelledby="title-2"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 02<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-2" tabindex="-1">MySQL：先设计表，再存数据</h1><p>重点：类型选对，约束写清。</p></header>
+<div class="callout"><b>易错：</b>用户 ID 计数不一定是去重用户数；新增行列能否纳入，取决于数据源范围。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="1"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="2" data-key="day-02" id="page-2" aria-labelledby="title-2"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 02<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-2" tabindex="-1">MySQL：先设计表，再存数据</h1><p>重点：类型选对，约束写清。</p></header>
 <div class="callout"><b>数据库 → 表 → 字段与记录。</b>字段是列，记录是行。</div>
 <h2 id="section-2-0">1. SQL 的四类用途</h2><table><tr><th>类别</th><th>做什么</th><th>关键词</th></tr><tr><td>DDL</td><td>改结构</td><td>CREATE / ALTER / DROP</td></tr><tr><td>DML</td><td>增删改记录</td><td>INSERT / UPDATE / DELETE</td></tr><tr><td>DQL</td><td>查数据</td><td>SELECT</td></tr><tr><td>DCL</td><td>管权限</td><td>GRANT / REVOKE（补充）</td></tr></table>
 <h2 id="section-2-1">2. 常用类型</h2><table><tr><th>数据</th><th>类型</th><th>原因</th></tr><tr><td>编号、数量</td><td>INT / BIGINT</td><td>存整数，按范围选</td></tr><tr><td>姓名、手机号</td><td>VARCHAR(n)</td><td>存文本，保留前导零</td></tr><tr><td>固定长度编码</td><td>CHAR(n)</td><td>定长文本</td></tr><tr><td>金额</td><td>DECIMAL(10,2)</td><td>共 10 位，其中 2 位小数</td></tr><tr><td>日期 / 日期时间</td><td>DATE / DATETIME</td><td>按是否需要时分秒选择</td></tr></table><p><b>记住：</b>金额通常用 DECIMAL；DOUBLE 是近似浮点数。</p>
@@ -31,7 +31,7 @@ CREATE DATABASE IF NOT EXISTS study_lab
 USE study_lab;
 SHOW TABLES;
 DESC users;
-SHOW CREATE TABLE users;</code></pre><p>MySQL 默认端口通常为 3306。补充建议：新练习库使用 utf8mb4。</p></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="2"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="3" id="page-3" aria-labelledby="title-3"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 03<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-3" tabindex="-1">数据维护：先分清改什么</h1><p>重点：ALTER 改结构，DML 改记录。</p></header>
+SHOW CREATE TABLE users;</code></pre><p>MySQL 默认端口通常为 3306。补充建议：新练习库使用 utf8mb4。</p></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="2"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="3" data-key="day-03" id="page-3" aria-labelledby="title-3"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 03<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-3" tabindex="-1">数据维护：先分清改什么</h1><p>重点：ALTER 改结构，DML 改记录。</p></header>
 <h2 id="section-3-0">1. 改表结构：ALTER</h2><pre><code>-- 新增字段
 ALTER TABLE users ADD age INT;
 -- 重命名字段，并重新写明类型和属性
@@ -50,7 +50,7 @@ WHERE emp_dept = '开发部';
 -- 删：工资等于 15000 的员工
 DELETE FROM emp_study
 WHERE emp_salary = 15000;</code></pre><div class="callout"><b>执行前先查：</b>把相同 WHERE 放进 SELECT，核对范围。以上变更示例仅用于独立练习库；调薪重复执行会重复增加。</div>
-<h2 id="section-3-2">3. 三种“删除”别混淆</h2><table><tr><th>命令</th><th>删除什么</th><th>保留结构</th></tr><tr><td>DELETE … WHERE …</td><td>满足条件的记录</td><td>是</td></tr><tr><td>TRUNCATE TABLE</td><td>全部记录，通常重置自增</td><td>是</td></tr><tr><td>DROP TABLE</td><td>整张表</td><td>否</td></tr></table><p><b>记住：</b>UPDATE / DELETE 不写 WHERE，会影响全表；MySQL 的 TRUNCATE 会隐式提交，不能当作可回滚的普通删除。</p><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="3"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="4" id="page-4" aria-labelledby="title-4"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 04<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-4" tabindex="-1">SELECT：把题目拆成查询步骤</h1><p>重点：先筛行，再分组，最后排序、取条数。</p></header>
+<h2 id="section-3-2">3. 三种“删除”别混淆</h2><table><tr><th>命令</th><th>删除什么</th><th>保留结构</th></tr><tr><td>DELETE … WHERE …</td><td>满足条件的记录</td><td>是</td></tr><tr><td>TRUNCATE TABLE</td><td>全部记录，通常重置自增</td><td>是</td></tr><tr><td>DROP TABLE</td><td>整张表</td><td>否</td></tr></table><p><b>记住：</b>UPDATE / DELETE 不写 WHERE，会影响全表；MySQL 的 TRUNCATE 会隐式提交，不能当作可回滚的普通删除。</p><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="3"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="4" data-key="day-04" id="page-4" aria-labelledby="title-4"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 04<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-4" tabindex="-1">SELECT：把题目拆成查询步骤</h1><p>重点：先筛行，再分组，最后排序、取条数。</p></header>
 <div class="callout"><b>读题找关键词：</b>“自营”→ WHERE；“每类”→ GROUP BY；“平均”→ AVG；“前 5”→ ORDER BY + LIMIT。</div>
 <h2 id="section-4-0">1. 一条 SQL 串起查询</h2><pre><code>SELECT category_id, AVG(score) AS avg_score
 FROM products
@@ -70,10 +70,69 @@ LIMIT 10, 5;</code></pre><p><b>分页：</b>偏移量 =（页码 − 1）× 每�
 FROM products
 WHERE is_self = '自营' AND score IS NOT NULL
 ORDER BY score DESC, id ASC
-LIMIT 1;</code></pre><p>并列最高时这里只取一条；“第二条记录”也不一定是“第二高的不同价格”。</p></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="4"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="5" id="page-5" aria-labelledby="title-5"><header><div class="eyebrow"><span class="tiny-dot"></span> 复习与资料<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-5" tabindex="-1">重点纠错：先核对这 6 项</h1><p>容易写错的不是长语句，而是条件和口径。</p></header>
-<table><tr><th>常见错误</th><th>正确记法</th></tr><tr><td>开发部涨薪漏掉条件</td><td><b>WHERE emp_dept = '开发部'</b></td></tr><tr><td>“工资等于 15000”写成 &gt;</td><td><b>emp_salary = 15000</b></td></tr><tr><td>“各分类内区分自营”只按自营分组</td><td><b>GROUP BY category_id, is_self</b></td></tr><tr><td>LIMIT 两个参数记反</td><td><b>LIMIT 偏移量, 条数</b></td></tr><tr><td>地区内部男女占比用列百分比</td><td>地区在行时，用<b>行汇总百分比</b></td></tr><tr><td>逐年增长固定对比 2017 年</td><td>逐年比较用<b>上一项</b>；固定 2017 年是基期比较</td></tr></table>
-<details><summary>展开：其他笔记修正</summary><ul><li><code>IF NOT EXISTS</code>：不存在才创建；已存在才避免重复创建。</li><li>删表写 <code>DROP TABLE IF EXISTS 表名;</code>，不是 IS EXISTS。</li><li>看结构写 <code>DESC 表名;</code>，不是 SHOW TABLES。</li><li>批量插入顺序：<code>INSERT INTO 表名 (列名) VALUES (...), (...);</code>。</li><li>订单建表练习缺少价格字段，应补齐。</li><li>“自营最高评分”必须先加自营筛选。</li><li>确认 orders 与 `order` 是否已重命名；库表名大小写统一。</li><li>夏装选择题的答案存在冲突：数字只说明夏装销售额的同期和上期差异，不能判断经理能力或全部服装表现。</li></ul></details>
-<div class="callout"><b>检查顺序：</b>条件是否漏写 → 分组维度是否齐全 → 分母 / 基期是否正确 → 排序与条数是否符合题意。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="5"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="6" id="page-6" aria-labelledby="title-6"><header><div class="eyebrow"><span class="tiny-dot"></span> 复习与资料<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-6" tabindex="-1">5 道题，检查是否真正掌握</h1><p>先自己回答，再展开答案。</p></header>
+LIMIT 1;</code></pre><p>并列最高时这里只取一条；“第二条记录”也不一定是“第二高的不同价格”。</p></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="4"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="5" data-key="day-05" id="page-5" aria-labelledby="title-5"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 05<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-5" tabindex="-1">多表查询：关联之前，先想清保留谁</h1><p>重点：表关系、JOIN、自连接、子查询。</p></header><div class="callout"><b>先问两件事：</b>用什么字段关联？哪些记录必须保留？</div><h2 id="section-5-0">1. 表之间怎么关联</h2><table><tr><th>关系</th><th>例子</th></tr><tr><td>一对一</td><td>基本信息 ↔ 详细信息</td></tr><tr><td>一对多</td><td>一个分类下有多个商品</td></tr><tr><td>多对多</td><td>学生 ↔ 课程，常用中间表记录选课关系</td></tr></table><h2 id="section-5-1">2. JOIN：决定保留谁</h2><table><tr><th>连接</th><th>保留范围</th></tr><tr><td>INNER JOIN</td><td>只保留匹配成功的记录</td></tr><tr><td>LEFT JOIN</td><td>保留左表全部记录；右表未匹配时补 NULL</td></tr><tr><td>RIGHT JOIN</td><td>保留右表全部记录；左表未匹配时补 NULL</td></tr></table><pre><code>-- 所有分类都保留；没有商品时，数量是 0
+SELECT c.id, c.name, COUNT(p.id) AS product_count
+FROM category AS c
+LEFT JOIN products AS p ON p.category_id = c.id
+GROUP BY c.id, c.name;</code></pre><p><b>易错：</b>LEFT JOIN 后在 WHERE 限制右表字段，可能过滤掉未匹配行。若要保留所有分类、只关联自营商品，应把 <code>p.is_self = '自营'</code> 放进 ON。</p><h2 id="section-5-2">3. 自连接：同一张表，扮演两个角色</h2><pre><code>SELECT city.title AS city, province.title AS province
+FROM areas AS province
+JOIN areas AS city ON city.pid = province.id
+WHERE province.title = &#x27;浙江省&#x27;;</code></pre><h2 id="section-5-3">4. 子查询：先算一个结果，再拿来用</h2><pre><code>-- 低于全部商品平均价
+SELECT id, name, price
+FROM products
+WHERE price &lt; (SELECT AVG(price) FROM products);
+
+-- 查最高价，保留并列记录
+SELECT id, name, price
+FROM products
+WHERE price = (SELECT MAX(price) FROM products);</code></pre><details><summary>展开：CROSS JOIN、UNION 与全连接</summary><p>CROSS JOIN 将两边所有行组合，行数为左表行数 × 右表行数。UNION 纵向合并并去重；UNION ALL 保留重复行。MySQL 不直接支持 FULL OUTER JOIN。</p><pre><code>-- 补充：用左连接 + 右侧未匹配行模拟全连接
+SELECT p.id AS product_id, c.id AS category_id
+FROM products p LEFT JOIN category c ON p.category_id = c.id
+UNION ALL
+SELECT p.id, c.id
+FROM products p RIGHT JOIN category c ON p.category_id = c.id
+WHERE p.id IS NULL;</code></pre></details><div class="callout"><b>统计前检查：</b>一对多连接会增加结果行数。先确认每行代表什么，再求和或计数，避免金额重复累计。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="5"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="6" data-key="day-06" id="page-6" aria-labelledby="title-6"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 06<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-6" tabindex="-1">MySQL 函数：把字段变成分析结果</h1><p>重点：数字、字符串、日期与条件判断。</p></header><div class="callout"><b>函数的作用：</b>把原始字段变成可比较、可分组、可展示的数据。</div><h2 id="section-6-0">1. 常用函数，按用途记</h2><table><tr><th>用途</th><th>函数</th><th>记忆点</th></tr><tr><td>数字处理</td><td>ROUND / FLOOR / CEIL</td><td>保留小数 / 向下取整 / 向上取整</td></tr><tr><td>拼接与截取</td><td>CONCAT / CONCAT_WS / SUBSTR</td><td>SUBSTR 从 1 开始；CONCAT 遇 NULL 返回 NULL</td></tr><tr><td>文本整理</td><td>LOWER / UPPER / REPLACE</td><td>统一大小写、替换内容</td></tr><tr><td>统计长度</td><td>CHAR_LENGTH / LENGTH</td><td>字符数 / 字节数，不等于磁盘占用</td></tr><tr><td>日期处理</td><td>DATE_ADD / DATE_SUB / DATEDIFF</td><td>日期加减；DATEDIFF 只比较日期部分</td></tr><tr><td>提取与展示</td><td>YEAR / MONTH / DAY / DATE_FORMAT</td><td>提取日期部分或转成字符串</td></tr><tr><td>条件判断</td><td>IF / IFNULL / CASE WHEN</td><td>二选一 / 空值替代 / 多分支</td></tr></table><h2 id="section-6-1">2. 典型例子：处理文本与日期</h2><pre><code>SELECT ROUND(3.14159, 2);                   -- 3.14
+SELECT FLOOR(-3.14), CEIL(-3.14);           -- -4、-3
+SELECT CONCAT_WS(&#x27;,&#x27;, &#x27;小明&#x27;, NULL, &#x27;杭州&#x27;); -- 小明,杭州
+SELECT SUBSTR(&#x27;abcdef&#x27;, -2);               -- ef
+SELECT DATE_SUB(&#x27;2026-10-26&#x27;, INTERVAL 1 DAY);
+SELECT DATE_FORMAT(&#x27;2026-10-26&#x27;, &#x27;%Y-%m&#x27;);   -- 2026-10</code></pre><h2 id="section-6-2">3. 多分支：从高到低判断</h2><pre><code>SELECT 学号, 科目, 成绩,
+  CASE
+    WHEN 成绩 IS NULL THEN &#x27;未出分&#x27;
+    WHEN 成绩 &gt;= 95 THEN &#x27;A&#x27;
+    WHEN 成绩 &gt;= 90 THEN &#x27;B&#x27;
+    ELSE &#x27;C&#x27;
+  END AS grade
+FROM score;</code></pre><p><b>不能写：</b><code>90 &lt;= 成绩 &lt; 95</code>。SQL 应写 <code>成绩 &gt;= 90 AND 成绩 &lt; 95</code>；上面的 CASE 已用顺序排除了 ≥95。</p><details><summary>展开：查询每个用户在 2020 年最后一次登录</summary><pre><code>SELECT user_id, MAX(time_stamp) AS last_stamp
+FROM logins
+WHERE time_stamp &gt;= &#x27;2020-01-01&#x27;
+  AND time_stamp &lt; &#x27;2021-01-01&#x27;
+GROUP BY user_id;</code></pre><p>补充：半开时间区间可覆盖全年，避免漏掉 12 月 31 日的时分秒。日期筛选优先比较原始日期字段。</p></details><details><summary>展开：AES 加解密的边界</summary><p>函数名是 <code>AES_ENCRYPT</code> 与 <code>AES_DECRYPT</code>。密文是二进制，可用 VARBINARY 或 BLOB 保存。AES 是可逆加密；补充建议：登录密码使用专用密码哈希，不使用可解密存储。</p></details><div class="callout"><b>空值和日期：</b>IFNULL(成绩, 0) 会改变展示含义，先确认“未出分”能否按 0 处理；DATE_FORMAT 返回文本，时间运算优先保留日期类型。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="6"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="7" data-key="day-07" id="page-7" aria-labelledby="title-7"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 07<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-7" tabindex="-1">FineBI：把查询结果变成仪表板</h1><p>重点：数据源、维度指标、图表与钻取。</p></header><div class="callout"><b>FineBI 工作流：</b>接数据 → 核对字段 → 做组件 → 加筛选 → 组装仪表板。</div><h2 id="section-7-0">1. 数据从哪里来</h2><table><tr><th>数据源</th><th>适合场景</th></tr><tr><td>Excel</td><td>快速导入练习数据</td></tr><tr><td>数据库表</td><td>直接分析 MySQL 等库中的表</td></tr><tr><td>SQL 数据集</td><td>先用 SQL 筛选、关联、汇总</td></tr><tr><td>自主数据集</td><td>在工具内继续处理已有数据</td></tr></table><p>导入后核对<b>表头、编码、字段类型</b>，再更新业务包。CSV 编码按实际文件选择，不能一律设置 GBK。</p><h2 id="section-7-1">2. 维度和指标，别只靠自动识别</h2><table><tr><th>字段角色</th><th>是什么</th><th>例子</th></tr><tr><td>维度</td><td>从什么角度看</td><td>年月、地区、门店、分类</td></tr><tr><td>指标</td><td>衡量多少或多好</td><td>销量、销售额、利润额、增长率</td></tr></table><p>做“门店销售额 TOP10”：门店作为维度，销售额求和，按金额降序，再取前 10。</p><h2 id="section-7-2">3. 组件怎么选</h2><table><tr><th>想表达什么</th><th>组件</th></tr><tr><td>核心总量：销量、销售额、利润</td><td>指标卡</td></tr><tr><td>商品或门店 TOP10</td><td>分组表 / 条形图</td></tr><tr><td>分类销量占比</td><td>饼图</td></tr><tr><td>不同月份的变化</td><td>折线图</td></tr><tr><td>省 → 市的逐层查看</td><td>钻取表格 / 区域地图</td></tr></table><p><b>补充建议：</b>金额和销量单位不同，趋势图应分图展示或明确坐标轴；词云适合概览，不适合精确比较大小。</p><h2 id="section-7-3">4. 仪表板的验收清单</h2><ul class="checks"><li>维度、指标和求和 / 计数方式正确。</li><li>金额、数量和百分比的单位清楚。</li><li>年月字段顺序正确，TOP10 按目标指标排序。</li><li>年份筛选与省市钻取能得到预期结果。</li><li>筛选前后的总数能与 SQL 或原表核对。</li></ul><details><summary>展开：安装和连接时记住什么</summary><p>按本机内存选择运行配置，完成官方激活和管理员账号设置。数据库连接使用真实主机、端口和授权账号；补充建议使用只读账号和独立强密码。不要照抄笔记里的弱口令。云环境中的 localhost 指云机器本身，不是个人电脑。</p></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="7"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="8" data-key="day-08" id="page-8" aria-labelledby="title-8"><header><div class="eyebrow"><span class="tiny-dot"></span> DAY 08<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-8" tabindex="-1">电商项目：从取数到展示，串成闭环</h1><p>重点：分层、指标口径、SQL 汇总与报表验证。</p></header><div class="callout"><b>项目主线：</b>订单数据 → MySQL 清洗与汇总 → FineBI 仪表板。先统一口径，再追求好看的图。</div><h2 id="section-8-0">1. 三层数据，各司其职</h2><table><tr><th>层</th><th>负责什么</th></tr><tr><td>ODS：源数据层</td><td>保存原始数据，方便追溯</td></tr><tr><td>DW：数据仓库层</td><td>清洗、统一字段与口径，形成可复用数据</td></tr><tr><td>ADS / DA：应用层</td><td>面向具体报表，计算指标和结果表</td></tr></table><p>这是本课程的简化分层；实际项目可再细分。笔记中的分析源表为 <code>dw_data</code>。</p><h2 id="section-8-1">2. 先确认三个统计口径</h2><ul><li><b>订单量：</b>已有汇总数量用 SUM(order_num)；按订单明细统计时确认是否要去重。</li><li><b>用户数：</b>COUNT(user_id) 是记录计数；独立用户数通常用 COUNT(DISTINCT user_id)。</li><li><b>金额占比：</b>分母是全国、当前地区还是东北基准，必须写清。</li></ul><h2 id="section-8-2">3. 三种可复用 SQL</h2><pre><code>-- 各渠道订单量
+SELECT chann_name, SUM(order_num) AS order_count
+FROM dw_data
+GROUP BY chann_name;</code></pre><pre><code>-- 每个地区内部，男女实付金额占比
+SELECT d.address, d.sex,
+  ROUND(100.0 * SUM(d.real_money)
+        / NULLIF(t.region_money, 0), 2) AS ratio_pct
+FROM dw_data d
+JOIN (
+  SELECT address, SUM(real_money) AS region_money
+  FROM dw_data
+  GROUP BY address
+) t ON d.address = t.address
+GROUP BY d.address, d.sex, t.region_money;</code></pre><pre><code>-- MySQL 8：每年与上一年相比的金额增长率
+WITH yearly AS (
+  SELECT YEAR(create_time) AS yr, SUM(real_money) AS money
+  FROM dw_data
+  GROUP BY YEAR(create_time)
+)
+SELECT cur.yr,
+  ROUND(100.0 * (cur.money - prev.money)
+        / NULLIF(prev.money, 0), 2) AS growth_pct
+FROM yearly cur
+LEFT JOIN yearly prev ON prev.yr = cur.yr - 1
+WHERE cur.yr BETWEEN 2017 AND 2020
+ORDER BY cur.yr;</code></pre><p>补充：NULLIF 防止分母为 0；没有上一年记录时增长率为 NULL。年度对上年度应称年度同比增长，不是月度环比。以上示例假设地区非空，空地区应在清洗时明确归类。</p><details><summary>展开：15 个项目需求速查</summary><table><tr><th>需求</th><th>关键做法</th></tr><tr><td>① 渠道订单量</td><td>渠道分组 + SUM(order_num)</td></tr><tr><td>② 地区实付金额</td><td>地区分组 + SUM(real_money)</td></tr><tr><td>③ 地区 × 渠道金额</td><td>双维度 GROUP BY；交叉表可用条件聚合</td></tr><tr><td>④ 渠道最大消费</td><td>MAX(consume_money)</td></tr><tr><td>⑤ 地区金额占比</td><td>地区金额 ÷ 全部金额</td></tr><tr><td>⑥ 地区内男女金额占比</td><td>地区性别金额 ÷ 该地区合计</td></tr><tr><td>⑦ 相对东北的百分比</td><td>地区金额 ÷ 东北金额 × 100</td></tr><tr><td>⑧ 与东北的差额</td><td>地区金额 − 东北金额</td></tr><tr><td>⑨ 年度增长率</td><td>年度汇总与上一年自连接</td></tr><tr><td>⑩ 地区金额累计</td><td>先明确地区排序，再累计</td></tr><tr><td>⑪ 地区按名称排序</td><td>核对排序规则；编码排序不等于通用拼音规则</td></tr><tr><td>⑫ 自定义地区顺序与用户数</td><td>ORDER BY FIELD(...)；确认是否去重用户</td></tr><tr><td>⑬ 年、季度金额</td><td>YEAR + QUARTER 分组</td></tr><tr><td>⑭ 年龄段金额</td><td>CASE WHEN 分段，并处理范围外 / NULL</td></tr><tr><td>⑮ 按性别筛选渠道金额</td><td>保留 sex，按渠道与性别分组，交给 BI 筛选</td></tr></table></details><h2 id="section-8-3">4. 从 SQL 结果到仪表板</h2><ol><li>核对原数据的空值、重复值、金额和时间类型。</li><li>用 SQL 得到指标结果，校验汇总金额与占比。</li><li>需要落表时，在练习库用 CREATE TABLE … AS SELECT …，明确刷新方式。</li><li>FineBI 连接结果表，更新业务包，再制作图表。</li><li>检查总额、筛选、排序和图表单位。</li></ol><div class="callout"><b>特别注意：</b>按渠道汇总时若丢掉 sex 字段，FineBI 就无法继续按性别筛选；保留需要交互的维度。</div><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="8"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="9" data-key="corrections" id="page-9" aria-labelledby="title-9"><header><div class="eyebrow"><span class="tiny-dot"></span> 巩固与复习<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-9" tabindex="-1">易错点：条件、分母和字段别漏</h1><p>对照最新八份笔记，修正明确错误。</p></header><div class="callout"><b>这次笔记中，DAY03 的调薪和删除条件、DAY04 的 LIMIT 参数顺序已经修正。</b>以下只列仍需留意的地方。</div><h2 id="section-9-0">1. SQL：先看条件，再看语法</h2><table><tr><th>来源</th><th>容易错的地方</th><th>正确记法</th></tr><tr><td>DAY04</td><td>“大于等于 999”却写 &gt; 999</td><td>应为 price &gt;= 999</td></tr><tr><td>DAY04</td><td>“每个分类内自营 / 非自营”只按自营分组</td><td>GROUP BY category_id, is_self</td></tr><tr><td>DAY04</td><td>求自营最高评分，却按价格排序</td><td>WHERE 自营，ORDER BY score DESC</td></tr><tr><td>DAY05</td><td>LEFT JOIN 的解释把保留对象写成右表</td><td>始终保留左表，未匹配的右表字段补 NULL</td></tr><tr><td>DAY05</td><td>自连接格式在 JOIN 前多写逗号</td><td>FROM areas a JOIN areas b ON …</td></tr><tr><td>DAY05</td><td>查询“低于平均价”却写 &gt;</td><td>用 price &lt; (SELECT AVG(price) …)</td></tr><tr><td>DAY06</td><td>90 &lt;= 成绩 &lt;= 95</td><td>用 AND 连接两个比较，或 CASE 按顺序判断</td></tr><tr><td>DAY06</td><td>AES_DECRYP 拼写错误</td><td>正确是 AES_DECRYPT</td></tr></table><h2 id="section-9-1">2. 分析：分母、维度不能丢</h2><table><tr><th>来源</th><th>问题</th><th>处理</th></tr><tr><td>DAY01</td><td>地区在行，求地区内部男女占比</td><td>用行汇总百分比</td></tr><tr><td>DAY01 / DAY08</td><td>年度对比叫作环比</td><td>与上一年相比用年度同比；固定基期则是基期增长</td></tr><tr><td>DAY07</td><td>CSV 一律按 GBK 导入</td><td>按文件实际编码选择</td></tr><tr><td>DAY08</td><td>建库写成 IF NOT EXITIS</td><td>正确是 IF NOT EXISTS</td></tr><tr><td>DAY08</td><td>用户数直接 COUNT(user_id)</td><td>先区分记录数与去重用户数</td></tr><tr><td>DAY08</td><td>按渠道汇总后还想用性别筛选</td><td>结果必须保留 sex 维度</td></tr><tr><td>DAY08</td><td>年龄 CASE 漏掉范围外与 NULL</td><td>明确过滤，或设置“其他 / 未知”分组</td></tr></table><details><summary>展开：其他基础提醒</summary><ul><li>DATE_FORMAT 返回字符串；日期运算优先保留原始时间类型，不能简单说“任何日期比较都不可能”。</li><li>LENGTH 是字符串字节数，不是表或字段真实磁盘占用。</li><li>Excel 普通区域刷新不会自动纳入范围外的行列；超级表也要核对扩展范围。</li><li>MySQL TRUNCATE 与 DELETE 的事务行为不同，不只是自增是否重置。</li><li>订单建表题要求价格时，应补齐 price 字段；主键不强制叫 id。</li></ul></details><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="9"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="10" data-key="practice" id="page-10" aria-labelledby="title-10"><header><div class="eyebrow"><span class="tiny-dot"></span> 巩固与复习<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-10" tabindex="-1">9 道题，串起八天学习内容</h1><p>先自己回答，再展开答案。</p></header>
 <details><summary>01 · 环比上涨，能直接说明新店长做得好吗？</summary><p>不能。环比只说明比上期上涨，不能直接证明因果。</p></details>
 <details><summary>02 · 地区在行、性别在列，如何看每个地区内部男女金额占比？</summary><p>金额求和，值显示方式选择<b>行汇总百分比</b>。</p></details>
 <details><summary>03 · 为什么手机号用 VARCHAR，金额用 DECIMAL？</summary><p>手机号是标识，需要保留前导零；金额需要精确的小数表示，并选择足够的位数。</p></details>
@@ -86,7 +145,12 @@ ORDER BY price DESC, id ASC;</code></pre></details>
 FROM products
 ORDER BY price DESC, id ASC
 LIMIT 10, 5;</code></pre><p>跳过 (3 − 1) × 5 = 10 行，再取 5 行。</p></details>
-<h2 id="section-6-0">最后自查</h2><ul class="checks"><li>能说清同比、环比和占比的分母。</li><li>能选择字段类型，写出主键、非空、唯一约束。</li><li>修改、删除前会先 SELECT 核对条件。</li><li>能独立组合 WHERE、GROUP BY、HAVING、ORDER BY、LIMIT。</li></ul><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="6"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="7" id="page-7" aria-labelledby="title-7"><header><div class="eyebrow"><span class="tiny-dot"></span> 复习与资料<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-7" tabindex="-1">回到你的学习笔记</h1><p>需要查细节时再展开。</p></header><div class="callout">原笔记文字大纲，供查阅。保留原答案，部分有误，请结合纠错页阅读；不含截图。</div><details><summary>数据分析DAY01.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY01
+<h2 id="section-10-0">前四天自查</h2><ul class="checks"><li>能说清同比、环比和占比的分母。</li><li>能选择字段类型，写出主键、非空、唯一约束。</li><li>修改、删除前会先 SELECT 核对条件。</li><li>能独立组合 WHERE、GROUP BY、HAVING、ORDER BY、LIMIT。</li></ul><h2 id="section-10-1">新增四天，再练 4 题</h2><details><summary>06 · 分类没有商品也要显示，用哪种连接？</summary><p>把 category 放在左表，LEFT JOIN products。统计商品数用 COUNT(p.id)，不要用 COUNT(*) 把空分类也计成 1。</p></details><details><summary>07 · 成绩 90–94 为 B，CASE 怎么写？</summary><pre><code>CASE
+  WHEN 成绩 IS NULL THEN &#x27;未出分&#x27;
+  WHEN 成绩 &gt;= 95 THEN &#x27;A&#x27;
+  WHEN 成绩 &gt;= 90 THEN &#x27;B&#x27;
+  ELSE &#x27;C&#x27;
+END</code></pre></details><details><summary>08 · FineBI 的门店销售额 TOP10，维度和指标是什么？</summary><p>维度：门店；指标：销售额求和。按销售额降序，再取前 10。核对筛选范围和金额单位。</p></details><details><summary>09 · 渠道汇总结果只有 chann_name 和金额，能按性别筛选吗？</summary><p>不能。需要保留 sex，按 chann_name、sex 分组，再让 FineBI 用 sex 筛选；提前聚合丢掉的维度无法凭空恢复。</p></details><h2 id="section-10-2">后四天自查</h2><ul class="checks"><li>能区分 INNER / LEFT / RIGHT JOIN 的保留范围。</li><li>会用子查询、日期函数和 CASE 处理数据。</li><li>能在 FineBI 核对维度、指标、单位与筛选。</li><li>能说清 ODS、DW、ADS 的职责及项目指标口径。</li></ul><footer class="chapter-end"><div><span class="end-label">CHAPTER COMPLETE?</span><strong>读懂了，就给自己一个小小的勾。</strong></div><button class="complete-button" type="button" data-complete="10"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>标记已掌握</span></button></footer></article><article data-chapter="11" data-key="sources" id="page-11" aria-labelledby="title-11"><header><div class="eyebrow"><span class="tiny-dot"></span> 巩固与复习<span class="meta-divider">/</span><span class="read-time"></span></div><h1 id="title-11" tabindex="-1">原笔记索引：DAY01–DAY08</h1><p>需要查细节时再展开。</p></header><div class="callout">本次上传的八份 XMind 文字大纲，供核对。保留原答案，部分有误，请结合纠错页阅读；截图、布局和关系线未复刻。原文 SQL 不会自动执行。</div><details><summary>数据分析DAY01.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY01
   了解
     数据
       理论
@@ -677,12 +741,11 @@ D. 4月是全年最差月份    错
         ALTER TABLE 表名 ADD 字段名 类型 [约束] [COMMENT &#x27;备注&#x27;];
     总练习
       修改购买人buy_user字段为buy_user_name 并且保留所有的约束
-        alter table orders change buy_user buy_user_name
-        varchar(10) not null comment &#x27;购买人&#x27;;
+        alter table `order` change buy_user buy_user_name varchar(10) not null comment &#x27;购买人&#x27;;
       新增商品分类字段，category，字符串类型，非空约束
-        alter table orders add category varchar(32) not null comment &#x27;商品类型&#x27;;
+        alter table `order` add category varchar(20) not null comment &#x27;商品分类&#x27;;
       删除购买人字段
-        alter table orders drop buy_user_name;
+        alter table `order` drop buy_user_name;
   DML学习
     理论
       操纵表数据，负责数据增、删、改
@@ -690,10 +753,10 @@ D. 4月是全年最差月份    错
       导入SQL
         -- 创建第三天的数据库
         CREATE DATABASE if not exists DAY03 charset = &#x27;utf8&#x27;;
-        
+
         -- 使用数据库
         USE day03;
-        
+
         -- 创建学生表
         CREATE TABLE `student` (
           `id` INT PRIMARY KEY AUTO_INCREMENT COMMENT &#x27;主键id&#x27;,
@@ -704,12 +767,12 @@ D. 4月是全年最差月份    错
           `dept` VARCHAR(30) COMMENT &#x27;所在院系&#x27;,
           `phone` VARCHAR(30) COMMENT &#x27;手机号&#x27;
         );
-        
+
         -- 创建商品表
         CREATE TABLE goods (
-            id INT PRIMARY KEY COMMENT &#x27;商品编号&#x27;,
+            id INT PRIMARY KEY COMMENT &#x27;主键id&#x27;,
             goods_name VARCHAR(50) NOT NULL COMMENT &#x27;商品名称&#x27;,
-        	goods_code VARCHAR(50) NOT NULL COMMENT &#x27;商品编号&#x27;,
+            goods_code VARCHAR(50) NOT NULL COMMENT &#x27;商品编号&#x27;,
             stock INT COMMENT &#x27;库存&#x27;,
             produce_date DATE COMMENT &#x27;生产日期&#x27;,
             price DECIMAL(10,2) COMMENT &#x27;价格&#x27;,
@@ -735,22 +798,28 @@ D. 4月是全年最差月份    错
             注意
               VALUE变成了VALUES
               每一行数据之间使用逗号隔开
-          INSERT INTO(字段1,字段2,字段3....) 表 VALUES(值1,值2,值3.....),(值1,值2,值3.....)...
+          INSERT INTO 表(字段1,字段2,字段3....)  VALUES(值1,值2,值3.....),(值1,值2,值3.....)...
             指定字段插入,一次性插入多行
           分别用上述四种方式,往学生表插入数据
         需求
           -- 需求1:使用格式一新增一个商品(库存:10,商品名称:手机,编号:1010,生产日期:今日,价格:4999.99,重量:2.00)
-            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight) value (1, &#x27;手机&#x27;, &#x27;1010&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 4999.99, 2.00);
+            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight)
+                value (1, &#x27;手机&#x27;, &#x27;1010&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 4999.99, 2.00);
           -- 需求2:使用格式2新增一个商品(库存:10,商品名称:电脑,编号:1012,生产日期:今日,价格:20000,重量:5.00)
-            insert into goods value (2, &#x27;电脑&#x27;, &#x27;1012&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 20000, 5.00);
+            insert into goods
+                value (2, &#x27;电脑&#x27;, &#x27;1012&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 20000, 5.00);
           -- 需求3:使用格式3新增两个商品
 -- (库存:10,商品名称:耳机,编号:1013,生产日期:今日,价格:1500,重量:0.3)
 -- (库存:10,商品名称:平板,编号:1014,生产日期:今日,价格:8000,重量:1.00)
-            insert into goods values (3, &#x27;耳机&#x27;, &#x27;1013&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 1500, 0.3),(4 , &#x27;平板&#x27;,&#x27;1014&#x27;,10,&#x27;2026-10-08 00:00:00&#x27;,8000,1.00);
+            insert into goods
+            values (3, &#x27;耳机&#x27;, &#x27;1013&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 1500, 0.3),
+                   (4, &#x27;平板&#x27;, &#x27;1014&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 8000, 1.0);
           -- 需求4:使用格式4新增两个商品
 -- (库存:10,商品名称:衣服,编号:2000,生产日期:今日,价格:200,重量:0.1)
 -- (库存:10,商品名称:鞋子,编号:2001,生产日期:今日,价格:500,重量:0.5)
-            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight) values (5, &#x27;衣服&#x27;, &#x27;2000&#x27;, 10, &#x27;2026-10-08 00:00:00&#x27;, 200, 0.1),(6 , &#x27;鞋子&#x27;,&#x27;2001&#x27;,10,&#x27;2026-10-08 00:00:00&#x27;,500,0.5);
+            insert into goods(id, goods_name, goods_code, stock, produce_date, price, weight)
+            values (5, &#x27;衣服&#x27;, &#x27;2000&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 200, 0.1),
+                   (6, &#x27;鞋子&#x27;, &#x27;2001&#x27;, 10, &#x27;2026-10-17 00:00:00&#x27;, 500, 0.5);
       修改
         格式
           UPDATE 表名 SET 字段名=值,字段名=值 [WHERE 条件]
@@ -790,21 +859,21 @@ emp_phone：手机号，唯一约束，varchar(11)
 emp_salary：工资，double
 emp_dept：部门，varchar (30)
         create table emp_study(
-            emp_id int primary key comment &#x27;员工编号&#x27;,
-            emp_name varchar(20) not null comment &#x27;员工名称&#x27;,
-            emp_phone varchar(11) unique comment &#x27;手机号&#x27;,
-            emp_salary double comment &#x27;工资&#x27;,
-            emp_dept varchar(30) comment &#x27;部门&#x27;
+          emp_id int primary key comment &#x27;员工编号&#x27;,
+          emp_name varchar(20) not null comment &#x27;员工姓名&#x27;,
+          emp_phone varchar(11) unique comment &#x27;手机号&#x27;,
+          emp_salary double comment &#x27;工资&#x27;,
+          emp_dept varchar(30) comment &#x27;部门&#x27;
         );
       新增三条员工数据
-        insert into emp_study values
-        (1,&#x27;张三&#x27;,&#x27;13800138001&#x27;,12000,&#x27;开发部&#x27;)
-        ,(2,&#x27;李四&#x27;,&#x27;13800138002&#x27;,12000,&#x27;测试部&#x27;)
-        ,(3,&#x27;王五&#x27;,&#x27;13800138003&#x27;,18000,&#x27;开发部&#x27;);
+        insert into emp_study
+        values(1 , &#x27;张三&#x27;,&#x27;13800138001&#x27;,12000,&#x27;开发部&#x27;),
+               (2 , &#x27;李四&#x27;,&#x27;13800138002&#x27;,15000,&#x27;测试部&#x27;),
+               (3 , &#x27;王五&#x27;,&#x27;13800138003&#x27;,18000,&#x27;开发部&#x27;);
       把开发部所有人工资上调 1000
-        update emp_study set emp_salary = emp_salary + 1000;
+        update emp_study set emp_salary = emp_salary + 1000 where emp_dept = &#x27;开发部&#x27;;
       删除工资等于 15000 的员工
-        delete from emp_study where emp_salary &gt; 15000;</pre></details><details><summary>数据分析DAY04.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY04
+        delete from emp_study where emp_salary = 15000;</pre></details><details><summary>数据分析DAY04.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY04
   DQL学习(重点)
     理论
       数据查询语言，用来查询数据库中表的记录
@@ -813,10 +882,10 @@ emp_dept：部门，varchar (30)
         导入SQL数据
           # 创建day04库
           CREATE DATABASE IF NOT EXISTS day04 CHARSET=utf8;
-          
+
           # 使用day04库
           USE day04;
-          
+
           # 建商品表
           CREATE TABLE products
           (
@@ -827,21 +896,21 @@ emp_dept：部门，varchar (30)
               is_self     VARCHAR(8) COMMENT &#x27;是否自营&#x27;,
               category_id INT COMMENT &#x27;商品类别ID&#x27;
           );
-          
+
           # 创建商品分类表格
           CREATE TABLE category
           (
               id   INT PRIMARY KEY AUTO_INCREMENT COMMENT &#x27;商品类别ID&#x27;,
               name VARCHAR(24) NOT NULL COMMENT &#x27;类别名称&#x27;
           );
-          
+
           # 添加分类数据
           INSERT INTO category
           VALUES (1, &#x27;手机&#x27;),
                  (2, &#x27;电脑&#x27;),
                  (3, &#x27;美妆&#x27;),
                  (4, &#x27;家居&#x27;);
-          
+
           # 新增商品数据
           INSERT INTO products
           VALUES (1, &#x27;华为Mate50&#x27;, 5499.00, 9.70, &#x27;自营&#x27;, 1),
@@ -871,6 +940,7 @@ emp_dept：部门，varchar (30)
               查什么
             FROM
               查哪里
+            从执行顺序上 ,先from后select
         注意
           *号代表表中的所有列
           as可以省略不写,名称和别名之间用空格隔开
@@ -879,11 +949,11 @@ emp_dept：部门，varchar (30)
           查询商品表中所有的商品
             select * from products;
           查看所有商品的名称和价格
-            select name,price from products;
+            select name , price from products;
           查看所有商品的名称和价格,要求给字段名起别名展示,别名就叫中文
-            select name as 商品名称,price as 价格 from products;
+            select name as 商品名称, price as 商品价格 from products;
           查看所有商品的名称和价格,要求给表名起别名并使用
-            select p.name,p.price from products as p;
+            select p.name , p.price from products as p;
       条件查询
         作用
           查询每一行数据时，对WHERE后的条件进行判断，满足条件的数据才会显示，不满足的过滤
@@ -895,6 +965,7 @@ emp_dept：部门，varchar (30)
           比较运算符
             作用
               用来对两个数据进行比较，比较的结果是成立(True)或不成立(False)。
+                1是对的  0 是错的
             运算符
               &gt;
                 大于
@@ -908,13 +979,14 @@ emp_dept：部门，varchar (30)
                 小于等于
               !=
                 不等于
+                不等于也可以用&lt;&gt;
             需求
               查询自营的所有商品信息
                 select * from products where is_self = &#x27;自营&#x27;;
               查询价格低于1000的所有商品信息
                 select * from products where price &lt; 1000;
               查询价格大于等于999的所有商品信息
-                select * from products where price &gt;= 999;
+                select * from products where price &gt; 999;
           逻辑运算符
             作用
               连接多个条件，表示多个条件之间的与、或、非关系
@@ -944,12 +1016,12 @@ emp_dept：部门，varchar (30)
                   使用IN扣号内一定要有数据
             需求
               查询价格在999~4199价格之间的数据
-                select * from products where price between 999 and 4199;
+                select *  from products where price between 999 and 4199;
               查询价格是999,2199,4199的数据
                 select * from products where price in (999,2199,4199);
           模糊查询
             作用
-              模糊查询，查询含有某些内容的数据
+              查询含有某些内容的数据
             运算符
               字段名称 LIKE &#x27;%值%&#x27;
                 %表示任意多个字符
@@ -1005,7 +1077,7 @@ emp_dept：部门，varchar (30)
           查询所有商品,按照价格从高到低进行排序
             select * from products order by price desc;
           查询所有商品,先按自营和非自营排序,再按价格从低到高排序
-            select * from products order by is_self, price;
+            select * from products order by is_self , price;
           查询价格高于2000的商品，并按照价格从高到低进行排序
             select * from products where price &gt; 2000 order by price desc;
       聚合函数
@@ -1033,9 +1105,9 @@ FROM  表名;
             聚合函数的计算会忽略null值
         需求
           统计所有商品价格的平均值
-            select avg(price) from products;
+            select avg(price) from products ;
           统计自营商品的数量
-            select count(*) from products where is_self = &#x27;自营&#x27;
+            select count(id) from products where is_self = &#x27;自营&#x27;;
       分组查询
         理论
           对多行数据做统计运算，把多条输入合并成一个结果的函数
@@ -1061,27 +1133,19 @@ GROUP BY 分组字段,...
             字段被聚合函数统计【聚合函数(字段)】
         需求
           统计每个分类中自营商品和非自营商品的平均价格
-            select
-            is_self,
-            avg(price)
-            from products
-            group by is_self;
+            select is_self , avg(price) from products group by is_self;
           统计每个分类商品的平均评分，并筛选平均评分大于9.5的分类
-            select
-            category_id,
-            avg(score)
-            from products
-            group by category_id
-            having avg(score) &gt; 9.5;
+            select category_id , avg(score) from products group by category_id having avg(score) &gt; 9.5;
       LIMIT查询
         理论
           获取查询结果中指定范围内的行
+          分页查询
         格式
           SELECT
 字段列表
 FROM
 表名
-LIMIT N,M
+LIMIT M,N
             M:表示开始索引,默认是0,代表从第M+1行开始
             N:表示查询条数,提取多少条数据
           关键字
@@ -1091,17 +1155,1038 @@ LIMIT N,M
           如果从头开始M可以省略不写
         需求
           获取所有商品中，价格次高（第二高）的商品信息
-            select
-            *
-            from products
-            order by price desc
-            limit 1,1;
+            select * from products order by price desc limit 1,1;
           获取所有自营商品中，评分最高的商品信息
+            select * from products where is_self = &#x27;自营&#x27; order by price desc limit 1;
+      SQL语句的执行顺序(拓展)
+        FROM -&gt; WHERE -&gt; GROUP BY -&gt; 聚合函数 -&gt; HAVING -&gt; 	SELECT -&gt; DISTINCT -&gt; ORDER BY -&gt; LIMIT</pre></details><details><summary>数据分析DAY05.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY05
+  DQL多表查询
+    课前准备
+      导入课件中areas.sql表
+      导入课件中sales.sql表
+      导入课件中student.sql表
+    思考
+      实际开发中，一个项目通常需要很多张表才能完成,
+这些表之间是不是存在着某些联系？
+若查询的数据分散在多个表中，该怎么查询？
+    表关系简介
+      一对一关系
+        A表一行关联B表一行,B表一行关联A表一行
+        例如:用户的简单信息和详细信息
+      一对多关系
+        A表一行关联B表多行,B表一行关联A表一行
+        例如:商品和商品类型的关系
+      多对多关系
+        A表一行关联B表多行,B表一行关联A表多行
+        列如:学生和课程之间,学生表,课程表,学生与课程关联表
+        注意
+          多对多关系中一定有一个中间关系表，记录两张表之间的数据联系
+    小测试
+      请说出下列数据关系是什么?
+        部门和员工
+          一对多
+        个人信息表和身份证表
+          一对一
+        订单和商品(一个订单可以有多个商品)
+          多对多
+        用户 和 爱好（一个用户可以有多个爱好；同一个爱好可以属于多个用户）
+          多对多
+    表连接
+      笛卡尔积(交叉连接)(了解)
+        概念
+          无条件连接
+          将左表的每一行数据无差别和右表的每一行数据分别进行关联，组成新的数据
+        语法
+          SELECT
+   *
+FROM 表1
+JOIN 表2
+          SELECT
+*
+FROM 表1,表2
+        操作演示
+          使用笛卡尔积查询商品信息,和商品分类信息
             select
             *
             from products
-            order by score desc
-            limit 1;
-      SQL语句的执行顺序(拓展)
-        FROM -&gt; WHERE -&gt; GROUP BY -&gt; 聚合函数 -&gt; HAVING -&gt; 	SELECT -&gt; DISTINCT -&gt; ORDER BY -&gt; LIMIT</pre></details><footer class="chapter-end"><div><span class="end-label">SOURCE NOTES</span><strong>回看原笔记，把细节连起来。</strong></div></footer></article><div class="pager"><button class="pager-button" id="prev"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span>上一章</span></button><span id="count" aria-live="polite"></span><button class="pager-button" id="next"><span>下一章</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="page-footer"><span>保持好奇，持续生长。</span><span>DARK HORSE LEARNING LOG</span></div></div><section class="toc-rail" aria-label="本页目录"><div class="toc-inner"><div class="toc-label">本页内容</div><nav id="section-nav" aria-label="本页章节"></nav><div class="rail-note"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><p>不必一次记住所有。<br>理解一点，就向前一步。</p></div><div class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd><span>切换章节</span></div></div></section></main></div>
-<dialog id="search-dialog" aria-labelledby="search-title"><div class="search-input-row"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" id="search-title" for="search-input">搜索知识点</label><input id="search-input" type="search" placeholder="搜索知识点，例如 WHERE、占比…" autocomplete="off"><button class="icon-button" id="close-search" aria-label="关闭搜索"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><div class="search-help" id="search-help">输入关键词，查找章节中的概念和示例。</div><div id="search-results" role="list" aria-label="搜索结果"></div><div class="search-footer"><span>搜索范围：全部 8 章</span><span><kbd>Esc</kbd> 关闭</span></div></dialog><div id="toast" role="status" aria-live="polite"></div><noscript><p class="noscript-note">启用 JavaScript 可使用目录、搜索和进度记录；以下正文仍可直接阅读。</p></noscript></body></html>
+            join category;
+        思考
+          笛卡尔积（交叉连接）很简单，为什么实际开发中不使用
+            结果行数可能非常恐怖
+            结果可能并不满足关联需求
+      有条件连接
+        简介
+          在实际表数据连接的过程中，经常需要在连接时跟上一个限制的连接条件
+          满足条件的数据行才能进行连接，这就是有条件连接
+        语法
+          SELECT
+   *
+FROM 表1
+JOIN 表2
+ON 连接条件
+          关键词
+            JOIN
+              表与表之间的连接关键词
+            ON
+              连接条件
+                例如:ON 表1.字段 = 表2.字段
+                使用比较运算符的基础上,也可以用逻辑运算符
+        连接方式
+          内连接
+            INNER JOIN，简写为 JOIN,返回两张表都满足连接条件的部分(交集)
+            注意
+              左表的每一行尝试和右表的每一行进行连接时，
+满足连接条件才能关联，否则不能连接(查询不到数据)
+              一般不简写,就写成INNER JOIN
+            练习
+              使用内连接的方式查询商品信息以及分类信息
+                select
+                *
+                from products
+                inner join category on products.category_id = category.id;
+          左连接
+            LEFT JOIN,左侧+交集部分
+            注意
+              左右两表关联时，除满足关联条件的数据会出现在最终的关联结果中
+              右表中不能和左表关联的数据也会出现，右表侧自动填充为NULL
+            练习
+              使用左连接的方式查询商品信息以及分类信息
+                select
+                *
+                from products
+                left join category on products.category_id = category.id;
+          右连接
+            RIGHT JOIN,右侧+交集部分
+            注意
+              左右两表关联时，除满足关联条件的数据会出现在最终的关联结果中
+              右表中不能和左表关联的数据也会出现，左表侧自动填充为NULL
+            练习
+              使用右连接的方式查询商品信息以及分类信息
+                select
+                *
+                from products
+                right join category  on products.category_id = category.id;
+          全连接
+            FULL JOIN,除了内连接的结果，还会包含左、右表的其他数据
+            注意
+              MySQL数据库不支持FULL JOIN关键字
+              需要将左连接和右连接的结果利用 UNION 关键字组合实现全连接的效果
+            练习
+              使用全连接的方式查询商品信息以及分类信息
+                # 实现左连接
+                select
+                *
+                from products p
+                left join category c on p.category_id = c.id
+
+                # 进行关联
+                union
+                # 实现右连接
+                select
+                *
+                from products p
+                right join category c on p.category_id = c.id;
+            拓展
+              UNION会自动去重,如果需要不去重则使用UNION ALL
+        需求
+          使用category 和 products 表数据,每个分类下的所有商品，没有商品的分类不显示（内连接）
+查询字段：分类id、分类名称、商品id、商品名称
+            select
+            c.id as 分类id,
+            c.name as 分类名称,
+            p.id as 商品id,
+            p.name as 商品名称
+            from products p
+            inner join category c on p.category_id = c.id;
+          每个所有分类的所有商品，没有分类的商品也要显示（左连接）
+查询字段：分类id、分类名称、商品id、商品名称
+            select
+            c.id as 分类id,
+            c.name as 分类名称,
+            p.id as 商品id,
+            p.name as 商品名称
+            from products p
+            left join category c on p.category_id = c.id;
+          每个所有分类的所有商品，没有商品的分类也要显示（右连接）
+查询字段：分类id、分类名称、商品id、商品名称
+            select
+            c.id as 分类id,
+            c.name as 分类名称,
+            p.id as 商品id,
+            p.name as 商品名称
+            from products p
+            right join category c on p.category_id = c.id;
+          每个分类的所有商品，没有商品的分类以及没有分类的商品都要显示（全连接）
+查询字段：分类id、分类名称、商品id、商品名称
+            select
+            c.id as 分类id,
+            c.name as 分类名称,
+            p.id as 商品id,
+            p.name as 商品名称
+            from products p
+            left join category c on p.category_id = c.id
+            union
+            select
+            c.id as 分类id,
+            c.name as 分类名称,
+            p.id as 商品id,
+            p.name as 商品名称
+            from products p
+            right join category c on p.category_id = c.id;
+      自关联查询
+        思考
+          如果要你设计数据表格来保存省市区的数据,应该设计几张表
+            省表,区表,市表
+            一张区域表
+        概念
+          两个表进行关联时，如果左表和右边是同一张表，这就是自关联
+        语法
+          SELECT
+*
+FROM
+表1 a,
+JOIN 表1 b
+ON 关联条件
+        注意
+          左右表如果是同一张表,那么自关联时必须起别名
+        需求
+          查询浙江省下所有市的信息,字段要求:市级地区id、市级地区名称、父级地区id、父级地区名称
+            select
+            t2.id as 市级地区id,
+            t2.title as 市级地区名称,
+            t1.id as 父级地区id,
+            t1.title as 父级地区名称
+            from areas as t1
+            inner join areas as t2
+            on t1.id = t2.pid
+            where t1.title = &#x27;浙江省&#x27;;
+          查询&#x27;安徽省&#x27;下的所有市，以及市下面的区县的信息.字段要求:省id、省名称、市id、市名称、区县id、区县名称
+            select
+            t1.id as 省id,
+            t1.title as 省名称,
+            t2.id as 市id,
+            t2.title as 市名称,
+            t3.id as 区县id,
+            t3.title as 区县名称
+            from areas as t1
+            inner join areas as t2
+            on t1.id = t2.pid
+            inner join areas as t3
+            on t2.id = t3.pid
+            where t1.title = &#x27;安徽省&#x27;;
+        拓展
+          背景
+            现在有一张销售信息表 sales，记录了某店铺某年1月-12月每个月的销售额。
+          需求
+            计算每个月的销售额和上一个月销售额的差值
+              select
+              t1.month,
+              t1.revenue - t2.revenue
+              from sales as t1
+              left join sales t2
+              on t1.month = t2.month + 1;
+            查询该店铺查询截止到每个月的销售额
+              select
+              t1.month,
+              sum(t2.revenue)
+              from sales as t1
+              left join sales as t2
+              on t1.month &gt;= t2.month
+              group by  t1.month;
+      子查询操作
+        思考
+          如何查询价格大于所有商品平均价的商品数据
+            先获取商品的平均价格作为条件
+            再拿商品价格挨个判断
+        概念
+          在一个 SELECT 语句中，嵌入了另外一个 SELECT 语句
+          被嵌入的 SELECT 语句称之为子查询语句，外部那个SELECT 语句则称为主查询语句
+        作用
+          子查询的结果充当主查询的条件
+          子查询的结果充当主查询的数据源(临时表)
+            如果作为临时表则需要起别名
+          子查询的结果充当主查询的查询字段
+          子查询SQL需要使用小括号()包裹起来
+        需求
+          查询当前商品小于平均价格的商品
+            select
+            *
+            from products
+            where price &gt; (select avg(price) from products);
+          查询价格最高的商品（价格最高的可能不只一个）
+            select
+            *
+            from products
+            where price = (select max(price) from products);
+          查询不同类型的商品的平均价格，结果中包含分类的名称
+            select
+            t2.name,
+            avg(t1.price)
+            from products as t1
+            left join (select id , name from category) as t2
+            on t1.category_id = t2.id
+            where category_id is not null
+            group by t1.category_id;
+          针对 students 表的数据，计算每个同学的Score分数和整体平均分数的差值
+            select
+            Score - (select avg(Score) from students)
+            from students</pre></details><details><summary>数据分析DAY06.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY06
+  MYSQL函数
+    课前准备
+      新建day06数据库
+      导入users.sql
+      导入logins.sql
+      导入weather.sql
+      导入score.sql
+    理论
+      在MySQL中有很多内置函数
+      除了之前学习的聚合函数之外，还有很多其他内置函数
+        数值函数
+        字符串函数
+        时间日期函数
+        流程控制函数
+        加解密函数
+      今天所学的函数,可以作为查询的字段,也可以做为条件字段,甚至于分组字段
+    学习途径
+      官方
+        https://dev.mysql.com/doc/refman/8.0/en/functions.html
+      命令
+        HELP 函数名
+      AI
+        根据需求询问AI
+    数值函数
+      作用
+        对数字类型的数据进行处理操作
+          INT
+            整数
+          BIGINT
+            较大整数
+          DECIMAL
+            小数 精准
+          DOUBLE
+            小数
+      常用函数
+        ROUND(字段,保留位数)
+          指定数据保留位数，会四舍五入
+        FLOOR(字段)
+          向下取整
+        CEIL(字段)
+          向上取整
+      小测试
+        SELECT ROUND(3.1415926,2)
+          3.14
+        SELECT FLOOR(-3.14)
+          -4
+        SELECT CEIL(-3.14)
+          -3
+      需求
+        # 计算每个月的销量占所有月份销量之和百分比(保留2位小数),
+# 字段要求:month、revenue、sum(所有月份销售之和)、ratio(每月销量占所有月份销量之和的百分比)
+          SELECT
+              month,
+              revenue,
+              (SELECT SUM(revenue) FROM sales) AS `sum`,
+              ROUND(revenue / (SELECT SUM(revenue) FROM sales) * 100, 2) AS ratio
+          FROM sales;
+    字符串函数
+      作用
+        对字符串类型的数据进行处理操作
+          varchar
+            不会补齐字符串
+          char
+            自动补齐的字符串
+      常用函数
+        LOWER(字符串)
+          将英文字母转换为小写
+          对数据进行统一格式化的使用
+        UPPER(字符串)
+          将英文字母转换为大写
+          对数据进行统一使用
+        CONCAT(字符串1,字符串2...)
+          字符串拼接
+          注意
+            如果有一个为null,则最后拼接结果就为null
+          可以拼接一些字段
+        CONCAT_WS(分隔符,字符串1,字符串2....)
+          使用分隔符拼接
+          注意
+            分隔符不能为null
+            如果字符串为null则会被忽略
+        REPLACE(字符串,旧子串,新子串)
+          字符串替换
+          外卖手机号
+          游戏或者各种软件敏感词汇会变成*
+        SUBSTR(字符串, 起始位置, [截取长度])
+          字符串截取
+          注意
+            MySQL 下标从 1 开始！不是 0！
+            起始位置支持负数,如果为负数则从尾部计算
+            如果忽略截取长度则默认截取完
+          作用
+            字符串年月日,我只要年
+            省市区我只要省
+        LEFT(字符串,截取长度)
+          从字符串左侧开始,截取
+        RIGHT(字符串,截取长度)
+          从字符串右侧开始,截取
+        CHAR_LENGTH(字符串)
+          统计字符个数(肉眼看到的)
+          统计分析字段占用
+        LENGTH(字符串)
+          统计字节数量(磁盘占用大小)
+      小测试
+        SELECT LOWER(&#x27;HelloMySQL&#x27;);
+          hellomysql
+        SELECT UPPER(&#x27;sql学习&#x27;);
+          SQL学习
+        SELECT CONCAT(&#x27;张三&#x27;,&#x27;-&#x27;,&#x27;25&#x27;);
+          张三-25
+        SELECT CONCAT(&#x27;张三&#x27;,NULL,&#x27;25&#x27;);
+          null
+        SELECT CONCAT_WS(&#x27;,&#x27;,&#x27;小明&#x27;,NULL,&#x27;杭州&#x27;);
+          小明,杭州
+        SELECT CONCAT_WS(NULL,&#x27;A&#x27;,&#x27;B&#x27;);
+          null
+        SELECT REPLACE(&#x27;2026-08-11&#x27;,&#x27;-&#x27;,&#x27;/&#x27;);
+          2026/08/11
+        SELECT REPLACE(&#x27;banana&#x27;,&#x27;a&#x27;,&#x27;*&#x27;);
+          b*n*n*
+        SELECT SUBSTR(&#x27;abcdef&#x27;,1,3);
+          abc
+        SELECT SUBSTR(&#x27;abcdef&#x27;,-2);
+          ef
+        SELECT LEFT(&#x27;Database&#x27;,4);
+          Data
+        SELECT RIGHT(&#x27;Database&#x27;,3);
+          ase
+      需求
+        users表,编写一个 SQL 查询来修复名字，使得只有第一个字符是大写的，其余都是小写的。
+          update users set name = concat(upper(substr(name,1,1)),lower(substr(name,2)))
+    时间函数
+      作用
+        对时间日期类型的数据进行操作
+          datetime
+        时间函数在使用的时候基本都用来做条件
+      常用函数
+        NOW()
+          获取当前时间
+        CURRENT_DATE()
+          获取当前年月日
+        CURRENT_TIME()
+          获取当前时分秒
+        DATE_ADD (日期，INTERVAL 数值 单位)
+          日期加上一段时间
+          单位(常用)
+            DAY
+              日
+            MONTH
+              月
+            YEAR
+              年
+            WEEK
+              周
+            HOUR
+              小时
+            MINUTE
+              分钟
+            SECOND
+              秒
+        DATE_SUB (日期，INTERVAL 数值 单位)
+          日期减去一段时间
+        DATEDIFF (日期 1, 日期 2)
+          计算两个日期相差天数
+          注意
+            只会对比日期的年月日,不会对比时分秒
+        YEAR(时间)
+          提取年份
+        MONTH(时间)
+          提取月份
+        DAY(时间)
+          提取日期
+        DATE_FORMAT (日期时间，格式化模板)
+          时间格式化转化为字符串
+          模版占位符
+            %Y
+              4位年份
+            %m
+              两位月份
+            %d
+              两位日期
+            %H
+              24小时制度,00~23
+            %i
+              分钟00~59
+            %s
+              秒00~59
+          注意
+            模板占位符必须和字符串结构一一对应
+            DATE_FORMAT返回的是字符串.不再是日期类型,无法再拿来做日期比较
+        经常会被使用在分组操作上
+      小测试
+        获取当前时间
+          select now();
+        获取当前时间(年月日)
+          select current_date();
+        获取当前时间(时分秒)
+          select current_time();
+        获取10天后的时间
+          select date_add(now() , interval 10 day);
+        获取1年后的时间
+          select date_add(now() , interval 1 year);
+        获取2天前的时间
+          select date_sub(now() , interval 2 day);
+        获取2月前的时间
+          select date_sub(now() , interval 2 month );
+        获取前面两个答案差距多少天
+          select datediff(date_sub(now() , interval 2 day)
+              , date_sub(now() , interval 2 month ));
+        获取今年的年份
+          select year(now());
+        获取今年的月份
+          select month(now());
+        获取今天是几号
+          select day(now());
+        将今天的时间按照   xxxx/xx/xx的格式输出
+          select date_format(now() , &#x27;%Y/%m/%d&#x27;)
+      需求
+        查询2020年的登录记录中，每个用户的最后一次登录时间。查询结果字段：user_id、last_stamp（2020年最后一次登录时间）
+          select
+          user_id,
+          max(time_stamp)
+          from
+          logins
+          where year(time_stamp) = 2020
+          group by user_id;
+        查询温度比前一天（昨天）温度高的记录id。查询结果字段：id
+          select
+          t1.id
+          from weather t1
+          left join weather t2
+          on t2.recordDate = date_sub(t1.recordDate ,interval 1 day)
+          where t1.temperature &gt; t2.temperature;
+    加解密函数
+      作用
+        对重要数据进行加密和解密
+      常用函数
+        AES_ENCRYPT(明文,秘钥)
+          加密
+        AES_DECRYP(密文,秘钥)
+          解密
+        注意
+          密文无法被varchar类型存储,只能使用varbinary类型存储
+      小测试
+        加密密码heima123
+          select aes_encrypt(&#x27;heima123&#x27;,&#x27;heima&#x27;);
+        解密这个密码
+          select aes_decrypt(aes_encrypt(&#x27;heima123&#x27;,&#x27;heima&#x27;), &#x27;heima&#x27;);
+        需求
+          给users表中新增一个字段,加密名称(encrypt_name)
+            alter table users add encrypt_name varbinary(1000) comment &#x27;加密名称&#x27;;
+          把users表中的用户名称全部加密,赋值
+            update users set encrypt_name = aes_encrypt(name,&#x27;heima_name&#x27;);
+          查询users表中的所有用户名称,并且用明文返回
+            select aes_decrypt(encrypt_name , &#x27;heima_name&#x27;) from users;
+      对称加密
+        加密之后的操作是可逆的
+    流程函数
+      作用
+        SQL 内部做条件判断
+      常用函数
+        IF(条件,成立值,不成立值)
+          根据条件,输出相对应的结果
+        IFNULL(值1 , 值2)
+          判断值1是否为null,如果为null则输出值2
+        CASE WHEN
+          多条件匹配
+          写法1 等值匹配
+            CASE 字段
+WHEN 值1 THEN 结果1
+WHEN 值2 THEN 结果2
+ELSE 默认值
+END
+          写法2 搜索case
+            CASE
+WHEN 条件判断 THEN 结果1
+WHEN 条件判断 THEN 结果2
+ELSE 默认值
+END
+      练习
+        查询学号、科目、成绩，新增列`pass`。成绩≥95 为 &#x27; 优秀 &#x27;，否则 &#x27; 良好 &#x27;。
+          select
+          学号,
+          科目,
+          成绩,
+          if(成绩&gt;=95,&#x27;优秀&#x27;,&#x27;良好&#x27;) pass
+          from
+          score;
+        假设部分学生成绩为 NULL。查询学号、科目，成绩如果是 NULL，展示为 0，别名`real_score`
+          select
+          学号,
+          科目,
+          ifnull(成绩,0) real_score
+          from
+          score;
+        查询学号、科目、成绩，新增等级`level`
+          select
+          学号,
+          科目,
+          成绩,
+          case
+          when 成绩 &gt;= 95 then &#x27;A&#x27;
+          when 90&lt;=成绩&lt;=95 then &#x27;B&#x27;
+          else &#x27;C&#x27; end level
+          from
+          score;
+          - score &gt;=95 → &#x27;A&#x27;
+- 90 ≤ score &lt;95 → &#x27;B&#x27;
+- &lt;90 → &#x27;C&#x27;</pre></details><details><summary>数据分析DAY07.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY07
+  fineBI
+    课前软件准备
+      安装
+        找到课件中的fineBI的安装包
+        双击打开安装页面
+        接收协议
+        指定安装目录
+          windows不建议安装在C盘
+        设置安装内存
+          注意
+            运行内存8G设置成4096
+            运行内存16G及以上不动即可
+        后续全部下一步即可
+      激活
+        安装完成第一次打开的页面
+        点击获取激活码
+        使用手机号注册
+        完善信息
+        会出来一个二维码,手机微信扫码即可
+        结果会跳转
+        复制验证码去激活即可
+      注册
+        激活完成页面
+        点击页面上方路径可以访问
+        首次进入
+        设置管理员账号密码
+          注意
+            建议用户名:admin
+            建议密码:123456
+            如果忘记,卸载也不能重置,所以设置简单的少事
+        数据库选择
+          先选择内置数据库
+      登录
+        安装/激活/注册完成之后,输入账号密码直接登录
+        页面
+    BI的基本概念和FineBI
+      BI的基本概念(了解)
+        BI指的是商业智能
+        一套完整的解决方案，
+用来将企业中现有的数据进行有效的整合
+        快速准确的提供报表并提出决策依据，
+帮助企业做出明智的业务经营决策
+        最主要的工作就是通过企业的数据做出数据报表
+      FineBI
+        功能
+          帆软旗下的自助式分析BI工具，用于实现数据报表制作
+        特点(了解)
+          国产软件，多年国内BI市场占有率第一
+          简单易上手，对非技术小白十分友好
+          文档齐全且详细，非常易于查询学习
+          官方还搭建了一个用户社区，上社区能够解决大部分使用问题
+    数据来源
+      数据库表
+        直接从数据库中获取数据
+      SQL数据集
+        自定义SQL查询获取数据集
+      Excel数据集
+        导入Excel数据集
+      自主数据集
+        可自行对已有数据集进行处理产生新的数据集
+    操作
+      数据准备
+        连接EXCEL数据
+          需求
+            使用FineBI软件直接连接EXCEL入门表
+          实现步骤
+            准备EXCEL表数据
+              在第7天课件的资料中
+            添加分组和业务包
+            新增完业务包之后双击进入
+            在业务包下添加数据
+              注意
+                业务包中添加数据表之后，选择更新一下业务包
+            完成
+        连接MYSQL数据
+          需求使用FineBI连接MYSQL中的data_demo库
+          步骤
+            准备data_demo库
+              创建一个data_demo的数据库
+                create database data_demo charset = &#x27;utf8&#x27;;
+              找到课件中的数据
+              打开之后点击另存为,修改为csv格式
+              data_demo点击导入数据按钮
+              选择刚刚转换为csv格式的excel
+              修改表头
+                注意
+                  如果表头没有显示成功,则需要手动确认
+                    右键第一行数据
+              设置Encoding为GBK防止乱码
+              修改字段细节
+                字段名称改为英文
+                表名改为英文
+                设置约束
+                设置字段类型
+              点击导入即可
+            配置fineBI数据库链接
+              找到新增入口
+              注意
+                已有的两个库禁止删除
+              选择MYSQL
+              填写相关信息
+                注意
+                  编码设置成自动
+              点击保存完成
+            fineBI连接
+              新增业务包
+              添加数据库
+              更新业务包
+      创建仪表板
+        理论
+          针对一个具体的分析业务,可以创建一个仪表板
+          仪表板上可以创建多个组件
+          方便最终统一对各个分析结果进行查看
+          效果展示
+        步骤
+          入口
+          新建文件夹
+          新建仪表板
+        拓展
+          可以在数据右上角直接创建仪表板
+          但是不推荐,每次创建都会新建一个仪表板
+      组件分析
+        维度和指标(概念)
+          理论
+            指标
+              指标是对数据的量化，用于衡量业务数据的好坏。指标是一数值或者比例
+              例如
+                好评量、好评率、增长率、销售额、利润额等
+            维度
+              维度是描述事情的角度，可以从不同维度分析同一指标，对指标进行细化
+              例如
+                年份是时间维度，城市是地理维度等
+          fineBI会自动区分维度和指标
+            注意
+              是工具就有可能出错
+              自动区分之后,人为看一眼
+        分组表分析
+          作用
+            本质就相当于SQL中的分组聚合操作
+            可以从不同维度对指标进行分析
+          需求
+            统计销售额Top10商品名称及其销售额
+          实现操作
+            添加组件选择数据源
+            操作数据
+            排序过滤
+              排序
+              过滤
+            设置销售额单位
+          区域介绍
+        指标卡分析
+          作用
+            指标卡主要用于对某一核心指标进行展示
+            比如销售分析中的：销量、销售额、利润额等
+          需求
+            需求1：分析商品的销量
+需求2：分析商品的销售额
+需求3：分析商品的利润额
+          实现操作
+            组件创建
+              添加组件选择数据源
+              操作数据
+              设置细节
+              按照上述方法创建三个组件
+            仪表盘编辑
+              进入仪表盘
+              调整大小
+        可视化组件分析
+          作用
+            图形的方式来展示分析的结果
+            FineBI图表可以分为「比较类、占比类、趋势或关联类、分布类、和其他」，用户可根据需求选择适合的图表
+          需求/实现
+            需求1:柱状图(门店销售额TOP10)
+              效果
+              添加组件选择数据源
+              操作数据
+              设置细节
+                  设置TOP10
+                  设置所有数据
+                  编辑标题
+                  显示销售额
+                  销售额单位设置
+            需求2:词云图(商品销量)
+              效果
+              添加组件选择数据源
+              操作数据
+              设置细节
+                  编辑标题
+                  设置颜色
+                  关闭图例
+                  勾选所有数据
+            需求3:饼图（不同分类销量占比）
+              效果
+              添加组件选择数据源
+              操作数据
+              设置细节
+                  关闭图例
+                  修改标题
+                  标签居外
+            需求4:折线图（不同月份销售额、利润额、销量趋势）
+              效果
+              添加组件选择数据源
+              操作数据
+              设置细节
+                  设置纵轴时间为年月
+                  把销售额,利润额,销量都设置成万
+                  修改标题
+                  图例至于上方
+                  销售额,利润额,销量分别设置标签
+        数据钻取分析
+          作用
+            实际业务往往比较复杂，一个组件的计算结果难以支撑分析结论
+            可能需要多个组件协作以读取重要信息
+            钻取可以让用户在查看仪表板时动态改变维度的层次，它包括向下钻取和向上钻取
+              向下钻取
+                下钻: 向下钻取,从宏观到细节
+              向上钻取
+                上卷: 向上钻取,从细节到宏观
+              其底层就是多重的分组操作
+          需求/实现
+            需求1:省市销售额钻取分析案例[表格]
+              效果
+              添加组件选择数据源
+              添加钻取目录
+                把城市加入钻取目录中
+              操作数据
+              钻取操作
+            需求2:省市销售额钻取分析案例[区域地图]
+              效果
+              添加组件选择数据源
+              添加省份,城市经纬度
+                  注意
+                    因为数据量过多,选择城市时会卡顿,稍等即可
+              添加钻取目录
+              操作数据
+              钻取操作
+                直接点击地图即可
+      仪表板制作
+        效果
+        操作/实现
+          拖拽到合适的大小
+          修改仪表板样式
+          增加表头
+          增加年份筛选
+          导出</pre></details><details><summary>数据分析DAY08.xmind · 展开文字大纲</summary><pre class="source">数据分析DAY08
+  分层
+    数据仓库架构可分为三层
+      源数据层(ODS)
+        直接把外部系统的数据原样搬过来，不改字段、不改内容，不对外给别人用
+        就是一块临时存放接口原始数据的地方，给后面的数据加工做准备
+      数据仓库层(DW)
+        把 ODS 的原始数据清洗干净，去掉脏数据，得到统一、准确的数据
+      数据应用层(DA或ADS层)
+        给前端程序直接读的数据，按报表、专题分析的要求加工计算出来
+    思考
+      为什么需要有这样的三层架构,不直接存在一张表内呢
+        分层是分步处理数据，原始数据、清洗明细、报表数据分开存放，互不影响，查询更快、方便排查问题
+  乐购电商数据分析项目
+    项目背景
+      随着电商行业的快速发展，各大电商平台之间的竞争日益激烈
+      为了提高市场份额和盈利能力，企业需要对订单数据进行深入分析，以便更好地了解客户需求、优化营销策略和提高运营效率
+      本项目将通过对某电商平台的订单数据进行分析，为企业提供有关渠道、地区、性别、年龄段等方面的数据支持，帮助企业制定更有针对性的营销策略
+    准备
+      新建数据库
+        day08
+          create database if not exitis day08 charset = &#x27;utf8&#x27;;
+      按照严禁的需求,导入电商EXCEL进入MYSQL中,表名:dw_data
+      字段对应
+    需求
+      数据
+        需求1：各渠道下的订单量
+          create table demo1
+              comment &#x27;各渠道下的订单量表&#x27;
+          select chann_name , sum(order_num) as order_num from dw_data group by chann_name;
+          表结构
+        需求2：各地区的实付金额
+          create table demo2
+              comment &#x27;各地区的实付金额&#x27;
+          select address,sum(real_money) from dw_data group by address;
+          表结构
+        需求3：各地区各渠道下的实付金额
+          create table demo3
+              comment &#x27;各地区各渠道下的实付金额&#x27;
+          select
+              chann_name,
+              sum(if(address=&#x27;东北&#x27; , real_money , null)) as 东北,
+              sum(if(address=&#x27;华北&#x27; , real_money , null)) as 华北,
+              sum(if(address=&#x27;华东&#x27; , real_money , null)) as 华东,
+              sum(if(address=&#x27;西北&#x27; , real_money , null)) as 西北,
+              sum(if(address=&#x27;西南&#x27; , real_money , null)) as 西南,
+              sum(if(address=&#x27;中南&#x27; , real_money , null)) as 中南
+          from dw_data group by chann_name;
+          表结构
+        需求4：求各渠道下的最大消费金额
+          create table demo4
+              comment &#x27;各渠道最大消费金额&#x27;
+          select chann_name , max(consume_money) from dw_data group by chann_name;
+          表结构
+        需求5：计算各地区的实付金额占比
+          create table demo5
+              comment &#x27;各地区的实付金额占比&#x27;
+          SELECT
+              t1.address AS address,
+              ROUND( t1.real_money / t2.total_money *100 ,2 ) AS ratio
+          FROM (
+              SELECT address, SUM(real_money) AS real_money
+              FROM dw_data
+              GROUP BY address
+          ) t1,
+          (
+              SELECT SUM(real_money) AS total_money
+              FROM dw_data
+          ) t2;
+          表结构
+        需求6：各地区下男女性别实付金额占比
+          CREATE TABLE demo6
+          COMMENT &#x27;各地区下男女实付金额占比&#x27;
+          SELECT
+              t1.sex,
+              ROUND(t1.东北 / total.total_东北 * 100,2) AS 东北,
+              ROUND(t1.华北 / total.total_华北 * 100,2) AS 华北,
+              ROUND(t1.华东 / total.total_华东 * 100,2) AS 华东,
+              ROUND(t1.西北 / total.total_西北 * 100,2) AS 西北,
+              ROUND(t1.西南 / total.total_西南 * 100,2) AS 西南,
+              ROUND(t1.中南 / total.total_中南 * 100,2) AS 中南
+          FROM (
+              SELECT
+                  sex,
+                  ROUND(SUM(IF(address = &#x27;东北&#x27;, real_money, NULL)), 2) AS 东北,
+                  ROUND(SUM(IF(address = &#x27;华北&#x27;, real_money, NULL)), 2) AS 华北,
+                  ROUND(SUM(IF(address = &#x27;华东&#x27;, real_money, NULL)), 2) AS 华东,
+                  ROUND(SUM(IF(address = &#x27;西北&#x27;, real_money, NULL)), 2) AS 西北,
+                  ROUND(SUM(IF(address = &#x27;西南&#x27;, real_money, NULL)), 2) AS 西南,
+                  ROUND(SUM(IF(address = &#x27;中南&#x27;, real_money, NULL)), 2) AS 中南
+              FROM dw_data
+              GROUP BY sex
+          ) t1,
+          (
+              SELECT
+                  ROUND(SUM(IF(address = &#x27;东北&#x27;, real_money, NULL)), 2) AS total_东北,
+                  ROUND(SUM(IF(address = &#x27;华北&#x27;, real_money, NULL)), 2) AS total_华北,
+                  ROUND(SUM(IF(address = &#x27;华东&#x27;, real_money, NULL)), 2) AS total_华东,
+                  ROUND(SUM(IF(address = &#x27;西北&#x27;, real_money, NULL)), 2) AS total_西北,
+                  ROUND(SUM(IF(address = &#x27;西南&#x27;, real_money, NULL)), 2) AS total_西南,
+                  ROUND(SUM(IF(address = &#x27;中南&#x27;, real_money, NULL)), 2) AS total_中南
+              FROM dw_data
+          ) total;
+          表结构
+        需求7：以东北地区为基准，计算实付金额其余地区占东北地区的百分比
+          create table demo7
+              comment &#x27;以东北地区为基准,计算实付金额其余地区占东北地区的百分比&#x27;
+          select
+          address as area,
+          round(realMoney / total_money * 100 , 2) as ration
+          from
+          (select address,sum(real_money) as realMoney from dw_data group by address) t1,
+          (select sum(real_money) as total_money from dw_data where address = &#x27;东北&#x27;) t2;
+          表结构
+        需求8：以东北地区为基准，计算其余项与东北之间实付金额的差异
+          create table demo8
+              comment &#x27;以东北地区为基准,计算其余项与东北之间实付金额的差异&#x27;
+          select
+          address as area,
+          realMoney - total_money as diff
+          from
+          (select address,sum(real_money) as realMoney from dw_data group by address) t1,
+          (select sum(real_money) as total_money from dw_data where address = &#x27;东北&#x27;) t2;
+          表结构
+        需求9：计算从2017年到2020年实付金额的环比增长率
+          create table demo9
+              comment &#x27;从2017年到2020年实付金额的环比增长率&#x27;
+          select
+          t1.year,
+          round((t1.realmoney -  t2.realmoney) / t2.realmoney * 100 , 2)
+          from
+          (select year(create_time) as `year`, sum(real_money) as  realmoney from dw_data group by year(create_time)) t1
+          left join
+          (select year(create_time) as `year`, sum(real_money) as realmoney from dw_data group by year(create_time)) t2
+          on t1.year -1  = t2.year;
+          表结构
+        需求10：求各地区的实付金额的累计求和
+          create table demo10
+              comment &#x27;各地区的实付金额的累计求和&#x27;
+          select
+          t1.address,
+          sum(t2.realmoney)
+          from
+          (select address from dw_data group by address order by address) t1
+          left join
+          (select address , sum(real_money) as realmoney from dw_data group by address) t2
+          on t1.address &gt;= t2.address
+          group by t1.address
+          order by t1.address;
+          表结构
+        需求11：各地区的消费金额(按照地区的字母进行排序)
+          create table demo11
+              comment &#x27;各地区的消费金额(按照地区的字母进行排序)&#x27;
+          select address , sum(consume_money) from dw_data
+          group by address order by convert(address using gbk);
+          表结构
+        需求12：各地区的用户数（按照西北、华北、东北、华东、中南、西南排序）
+          create table demo12
+              comment &#x27;各地区的用户数（按照西北、华北、东北、华东、中南、西南排序）&#x27;
+          select address , count(user_id) from dw_data
+          group by address order by field(address , &#x27;西北&#x27;,&#x27;华北&#x27;,&#x27;东北&#x27;,&#x27;华东&#x27;,&#x27;中南&#x27;,&#x27;西南&#x27;);
+          表结构
+        需求13：各年份、各季度的实付金额
+          create table demo13
+              comment &#x27;各年份、各季度的实付金额&#x27;
+          select year(create_time) ,quarter(create_time) , sum(real_money)
+          from dw_data group by year(create_time) , quarter(create_time)
+          order by  year(create_time) , quarter(create_time);
+          表结构
+        需求14：求各年龄段(18-27,28-37,38-47,48-57,58-67)的实付金额
+          create table demo14
+              comment &#x27;各年龄段(18-27,28-37,38-47,48-57,58-67)的实付金额&#x27;
+          select
+          case
+          when age between 18 and 27 then &#x27;18-27&#x27;
+          when age between 28 and 37 then &#x27;28-37&#x27;
+          when age between 38 and 47 then &#x27;38-47&#x27;
+          when age between 48 and 57 then &#x27;48-57&#x27;
+          when age between 58 and 67 then &#x27;58-67&#x27; end as age_group,
+          sum(real_money) as real_money
+          from dw_data
+          group by age_group
+          order by age_group;
+          表结构
+        需求15：求各渠道的实付金额(按照性别筛选)
+          create table demo15
+              comment &#x27;求各渠道的实付金额&#x27;
+          select
+          chann_name,
+          sum(real_money) as real_money
+          from
+          dw_data
+          group by chann_name;
+          表结构
+      连接fineBi
+        进入连接页面
+        选择MYSQL
+        填写相关数据库配置
+        添加分组/业务包
+        添加表
+        业务包更新
+        效果展示
+      添加文件/仪表板
+      搭建大屏
+        根据自己的喜好搭建即可</pre></details><footer class="chapter-end"><div><span class="end-label">SOURCE NOTES</span><strong>需要查细节时，再回看原笔记。</strong></div></footer></article><div class="pager"><button class="pager-button" id="prev"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span>上一章</span></button><span id="count" aria-live="polite"></span><button class="pager-button" id="next"><span>下一章</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="page-footer"><span>保持好奇，持续生长。</span><span>DARK HORSE LEARNING LOG</span></div></div><section class="toc-rail" aria-label="本页目录"><div class="toc-inner"><div class="toc-label">本页内容</div><nav id="section-nav" aria-label="本页章节"></nav><div class="rail-note"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><p>不必一次记住所有。<br>理解一点，就向前一步。</p></div><div class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd><span>切换章节</span></div></div></section></main></div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="search-input-row"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" id="search-title" for="search-input">搜索知识点</label><input id="search-input" type="search" placeholder="搜索知识点，例如 WHERE、占比…" autocomplete="off"><button class="icon-button" id="close-search" aria-label="关闭搜索"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><div class="search-help" id="search-help">输入关键词，查找章节中的概念和示例。</div><div id="search-results" role="list" aria-label="搜索结果"></div><div class="search-footer"><span>搜索范围：全部 12 章</span><span><kbd>Esc</kbd> 关闭</span></div></dialog><div id="toast" role="status" aria-live="polite"></div><noscript><p class="noscript-note">启用 JavaScript 可使用目录、搜索和进度记录；以下正文仍可直接阅读。</p></noscript></body></html>
