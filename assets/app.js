@@ -41,7 +41,7 @@
     observer?.disconnect(); const container = $('#section-nav');container.replaceChildren();
     let headings = $$('h2[id]', articles[current]);
     if (!headings.length) headings = $$('details>summary', articles[current]).map((el,i) => {el.id ||= `source-heading-${i}`;return el;});
-    headings.forEach(h => {const a = document.createElement('a');a.href = `#${h.id}`;a.textContent = h.textContent.replace(/^\d+\.\s*/, '');a.addEventListener('click', e => {e.preventDefault();h.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});h.setAttribute('tabindex','-1');h.focus({preventScroll:true});});container.append(a);});
+    headings.forEach(h => {const a = document.createElement('a');a.href = `#${h.id}`;a.textContent = h.textContent.replace(/^\d+\.\s*/, '');a.addEventListener('click', e => {e.preventDefault();for(let p=h.parentElement;p&&p!==articles[current];p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;h.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});h.setAttribute('tabindex','-1');h.focus({preventScroll:true});});container.append(a);});
     observer = new IntersectionObserver(entries => {const visible = entries.filter(e => e.isIntersecting);if (visible.length) {const id = visible[0].target.id;$$('a',container).forEach(a=>a.classList.toggle('active',a.hash===`#${id}`));}}, {rootMargin:'-90px 0px -60% 0px'});headings.forEach(h=>observer.observe(h));
     $('a', container)?.classList.add('active');
   }
@@ -50,7 +50,7 @@
     articles.forEach((el,i)=>{el.hidden = i!==n;el.classList.toggle('active',i===n);});
     nav.forEach((el,i)=>{el.classList.toggle('active',i===n);if(i===n)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
     $('#crumb').textContent=labels[n];$('#count').textContent=`${String(n+1).padStart(2,'0')} / ${String(articles.length).padStart(2,'0')}`;
-    $('#prev').disabled=n===0;$('#next').disabled=n===articles.length-1;
+    $('#prev').disabled=n===0;$('#next').disabled=n===articles.length-1;$('#prev').setAttribute('aria-label',n>0?'上一章：'+labels[n-1]:'上一章');$('#next').setAttribute('aria-label',n<articles.length-1?'下一章：'+labels[n+1]:'下一章');
     $('#prev span').textContent=n>0?labels[n-1]:'上一章';$('#next span').textContent=n<articles.length-1?labels[n+1]:'下一章';
     document.title=`${labels[n]} · Dark Horse 学习日志`;
     const hash=`#${chapterKeys[n]}`;
