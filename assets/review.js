@@ -14,6 +14,24 @@
     });
     article.dispatchEvent(new CustomEvent('studyviewchange',{bubbles:true}));
   }
+  document.addEventListener('click',e=>{
+    const link=e.target.closest('[data-review-jump]');
+    if(link){
+      e.preventDefault();const target=document.getElementById(link.hash.slice(1));if(!target)return;
+      target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});
+      target.tabIndex=-1;target.focus({preventScroll:true});return;
+    }
+    const button=e.target.closest('[data-exercise-toggle]');if(!button)return;
+    button.closest('.expanded-practice').querySelectorAll('.worked-question').forEach(question=>question.open=button.dataset.exerciseToggle==='open');
+  });
+  document.querySelectorAll('.expanded-practice').forEach(section=>{
+    function refresh(){
+      const questions=[...section.querySelectorAll('.worked-question')];
+      section.querySelector('[data-exercise-toggle="open"]').disabled=questions.every(q=>q.open);
+      section.querySelector('[data-exercise-toggle="close"]').disabled=questions.every(q=>!q.open);
+    }
+    section.addEventListener('toggle',refresh,true);refresh();
+  });
   document.querySelectorAll('article:has(.study-tabs)').forEach(article=>{
     const tablist=article.querySelector('.study-tabs');
     tablist.addEventListener('click',e=>{const b=e.target.closest('[data-view]');if(b)select(article,b.dataset.view);});
